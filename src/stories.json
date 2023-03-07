@@ -2,163 +2,190 @@
     "seventhDay": {
         "title": "What for?.... What if?",
         "descript": "Where it all begins.",
-        "themes": [],
-        "category": "project"
+        "themes": ["explo"],
+        "category": "project",
+        "referTo": []
     },
     "sandbox": {
         "title": "Sandbox",
         "descript": "",
-        "themes": [],
-        "category": "project"
+        "themes": ["explo", "prob"],
+        "category": "project",
+        "referTo": []
     },
     "doorman": {
         "title": "Doorman",
         "descript": "",
-        "themes": [],
-        "category": "project"
+        "themes": ["explo", "prob"],
+        "category": "project",
+        "referTo": []
     },
     "sois": {
         "title": "Individualized Study",
         "descript": "",
-        "themes": [],
-        "category": "adventure"
+        "themes": ["explo", "collab", "prob"],
+        "category": "adventure",
+        "referTo": []
     },
     "hitchhiking": {
         "title": "Hitchhacker",
         "descript": "",
-        "themes": [],
-        "category": "adventure"
+        "themes": ["explo", "collab"],
+        "category": "adventure",
+        "referTo": []
     },
     "friendzone": {
         "title": "Friendzone",
         "descript": "",
-        "themes": [],
-        "category": "work"
+        "themes": ["collab", "prob"],
+        "category": "work",
+        "referTo": []
     },
     "moog": {
         "title": "Moog",
         "descript": "",
-        "themes": [],
-        "category": "work"
+        "themes": ["prob"],
+        "category": "work",
+        "referTo": []
     },
     "sg": {
         "title": "It's not your fault",
         "descript": "Student Government",
-        "themes": [],
-        "category": "adventure"
+        "themes": ["collab"],
+        "category": "adventure",
+        "referTo": []
     },
     "htl": {
         "title": "HTL",
         "descript": "",
-        "themes": [],
-        "category": "work"
+        "themes": ["explo", "collab", "prob"],
+        "category": "work",
+        "referTo": []
     },
     "csh": {
         "title": "Computer Science House",
         "descript": "",
-        "themes": [],
-        "category": "adventure"
+        "themes": ["collab"],
+        "category": "adventure",
+        "referTo": []
     },
     "nasa": {
         "title": "NASA",
         "descript": "",
-        "themes": [],
-        "category": "work"
+        "themes": ["collab", "prob"],
+        "category": "work",
+        "referTo": []
     },
     "surnameStudies": {
         "title": "Surname Studies",
         "descript": "",
-        "themes": [],
-        "category": "project"
+        "themes": ["explo"],
+        "category": "project",
+        "referTo": []
     },
     "microsoft": {
         "title": "Applied Science",
         "descript": "",
         "themes": [],
-        "category": "work"
+        "category": "work",
+        "referTo": []
     },
     "businessCard": {
         "title": "PCB Business Card",
         "descript": "",
-        "themes": [],
-        "category": "project"
+        "themes": ["explo", "prob"],
+        "category": "project",
+        "referTo": []
     },
     "launch": {
         "title": "Launch Initiative",
         "descript": "",
-        "themes": [],
-        "category": "project"
+        "themes": ["collab", "prob"],
+        "category": "project",
+        "referTo": []
     },
     "heatTransfer": {
         "title": "Curiosity (almost) arrested the cat",
         "descript": "",
-        "themes": [],
-        "category": "project"
+        "themes": ["explo", "prob"],
+        "category": "project",
+        "referTo": []
     },
     "ti": {
         "title": "Bureaucracy is an illusion",
-        "descript": "",
-        "themes": [],
-        "category": "work"
+        "descript": "Trying to work at TI",
+        "themes": ["prob"],
+        "category": "work",
+        "referTo": []
     },
     "makerClass": {
         "title": "Breaking boundaries",
-        "descript": "",
-        "themes": [],
-        "category": "project"
+        "descript": "Can an undergrad student teach a class?",
+        "themes": ["explo", "collab"],
+        "category": "project",
+        "referTo": []
     },
     "orientation": {
         "title": "Rule-based autism",
         "descript": "",
-        "themes": [],
-        "category": "adventure"
+        "themes": ["collab", "prob"],
+        "category": "adventure",
+        "referTo": []
     },
     "nepaliKitchen": {
         "title": "Nepali Kitchen",
         "descript": "",
-        "themes": [],
-        "category": "adventure"
+        "themes": ["collab"],
+        "category": "adventure",
+        "referTo": []
     },
     "industrialDesign": {
         "title": "Industrial Design",
         "descript": "",
-        "themes": [],
-        "category": "adventure"
+        "themes": ["explo"],
+        "category": "adventure",
+        "referTo": []
     },
     "mit": {
         "title": "Kenny Kim, MIT Student",
         "descript": "",
-        "themes": [],
-        "category": "adventure"
+        "themes": ["explo", "collab"],
+        "category": "adventure",
+        "referTo": []
     },
     "gradParty": {
         "title": "Graduation Party",
         "descript": "",
-        "themes": [],
-        "category": "project"
+        "themes": ["explo", "collab"],
+        "category": "project",
+        "referTo": []
     },
     "turkiye": {
         "title": "Bugün Güzel",
         "descript": "",
-        "themes": [],
-        "category": "adventure"
+        "themes": ["explo", "collab", "prob"],
+        "category": "adventure",
+        "referTo": []
     },
     "spacex": {
         "title": "SpaceX",
         "descript": "",
-        "themes": [],
-        "category": "work"
+        "themes": ["prob"],
+        "category": "work",
+        "referTo": []
     },
     "personalWebsite": {
         "title": "Personal Website",
         "descript": "",
-        "themes": [],
-        "category": "project"
+        "themes": ["explo", "collab"],
+        "category": "project",
+        "referTo": []
     },
     "contact": {
         "title": "Let's Do It",
         "descript": "What are you waiting for? We can do something awesome...",
-        "themes": [],
-        "category": "adventure"
+        "themes": ["explo", "collab", "prob"],
+        "category": "adventure",
+        "referTo": []
     }
 }

@@ -17,8 +17,23 @@ $primary-type: "Raleway";
 
 // =Sizes=
 $frame-padding: 20px;
-$full-height: calc(100vh - (2 * $frame-padding));
+$frame-height: calc(100vh - (2 * $frame-padding));
 $margin-right-spacing: 10px;
+
+// =Animations=
+$color-transition-time: 0.4s;
+
+
+// === CLASSES ===
+.explo {
+    background-color: $accent1;
+}
+.collab {
+    background-color: $accent3;
+}
+.prob {
+    background-color: $accent4;
+}
 
 
 
@@ -79,15 +94,16 @@ p {
 
 #frame {
     max-width: 1440px;
-    height: 100vh;
+    height: $frame-height;
     margin: auto;
-    padding: $frame-padding;
+    padding-top: $frame-padding;
+    overflow-y: hidden;
 }
 
 #nav {
     float: left;
     width: 200px;
-    height: $full-height;
+    height: $frame-height;
     margin-right: $margin-right-spacing;
 
     #headshotArea {
@@ -119,7 +135,6 @@ p {
         position: absolute;
         bottom: 0px;
 
-        $color-transition-time: 0.4s;
         .navLink{
             color: $contrast;
             -webkit-transition: color $color-transition-time;
@@ -128,10 +143,11 @@ p {
             -o-transition:      color $color-transition-time;
             transition:         color $color-transition-time;
             transition-timing-function: ease-out;
-        }
-        .navLink:hover {
-            color: $primary;
-            cursor: pointer;
+            
+            &:hover {
+                color: $primary;
+                cursor: pointer;
+            }
         }
     }
 }
@@ -144,14 +160,14 @@ p {
     height: 100%;
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    gap: 20px;
 }
 
 #vdivider {
     float: left;
     position: relative;
     width: 0;
-    height: $full-height;
+    height: $frame-height;
     border: 2px solid #008B84;
     border-radius: 2px;
     margin-right: $margin-right-spacing;
@@ -161,7 +177,7 @@ p {
     flex: 0 1 400px;
     display: flex;
     flex-flow: column;
-    height: $full-height;
+    height: $frame-height;
 }
     
 #filterArea {
@@ -191,6 +207,10 @@ p {
         align-items: center;
         display: flex;
         justify-content: space-between;
+    }
+
+    .filterGap {
+        height: 15px;
     }
 
     .filter {
@@ -243,19 +263,80 @@ p {
     flex: 1 1 auto;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    padding: 0px 15px;
+    padding: 10px 20px 15px 15px;
     gap: 15px;
-    height: $full-height;
-
-    /* Brand/Muted */
+    height: calc($frame-height - 25px);
+    margin-bottom: -60px;
 
     background: $muted;
     box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
+
+    overflow-y: scroll;
 }
 
-#card {
+.card {
+    width: 100%;
+    height: 180px;
+
+    flex: 0 0 180px;
+    background-color: #008B84;
+    background: $neutral;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+
     display: flex;
     flex-direction: row;
+
+    overflow-y: hidden;
+
+    &:hover{
+        cursor: pointer;
+        .cardTitle {
+            color: $primary;
+        }
+    }
+
+    .cardThemeBar {
+        flex: 0 0 10;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+
+        .cardThemeBlock {
+            flex: 1 1 auto;
+        }
+    }
+
+    .thumbnail {
+        width: 300px;
+        height: 180px;
+        margin-right: 24px;
+    }
+
+    .cardTextArea {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 10px 0px;
+        gap: 20px;
+
+        .cardTitle {
+            flex: none;
+            flex-grow: 0;
+            margin: 0;
+            color: $contrast;
+            -webkit-transition: color $color-transition-time;
+            -moz-transition:    color $color-transition-time;
+            -ms-transition:     color $color-transition-time;
+            -o-transition:      color $color-transition-time;
+            transition:         color $color-transition-time;
+            transition-timing-function: ease-out;
+        }
+        .cardDescript {
+            flex: none;
+            flex-grow: 0;
+            margin: 0;
+        }
+    }
 }

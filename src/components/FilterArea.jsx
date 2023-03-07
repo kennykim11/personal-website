@@ -5,13 +5,15 @@ export function FilterArea() {
         <div id="searchbarArea">
             <input id="searchbar" type="text" placeholder="Search.."/>
         </div>
+        <div className="filterGap"/>
         <span className="filterSpan">
             <Filter name="explo" text="Exploration"/>
             <Filter name="collab" text="Collaboration"/>
             <Filter name="prob" text="Problem\nSolving"/>
         </span>
+        <div className="filterGap"/>
         <span className="filterSpan">
-            <Filter name="advent" text="Adventure"/>
+            <Filter name="adventure" text="Adventure"/>
             <Filter name="work" text="Work\nExperience"/>
             <Filter name="project" text="Project"/>
         </span>
