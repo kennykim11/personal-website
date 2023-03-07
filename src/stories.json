@@ -2,136 +2,163 @@
     "seventhDay": {
         "title": "What for?.... What if?",
         "descript": "Where it all begins.",
-        "themes": []
+        "themes": [],
+        "category": "project"
     },
     "sandbox": {
         "title": "Sandbox",
         "descript": "",
-        "themes": []
+        "themes": [],
+        "category": "project"
     },
     "doorman": {
         "title": "Doorman",
         "descript": "",
-        "themes": []
+        "themes": [],
+        "category": "project"
     },
     "sois": {
         "title": "Individualized Study",
         "descript": "",
-        "themes": []
+        "themes": [],
+        "category": "adventure"
     },
     "hitchhiking": {
         "title": "Hitchhacker",
         "descript": "",
-        "themes": []
+        "themes": [],
+        "category": "adventure"
     },
     "friendzone": {
         "title": "Friendzone",
         "descript": "",
-        "themes": []
+        "themes": [],
+        "category": "work"
     },
     "moog": {
         "title": "Moog",
         "descript": "",
-        "themes": []
+        "themes": [],
+        "category": "work"
     },
     "sg": {
         "title": "It's not your fault",
-        "descript": "",
-        "themes": []
+        "descript": "Student Government",
+        "themes": [],
+        "category": "adventure"
     },
     "htl": {
         "title": "HTL",
         "descript": "",
-        "themes": []
+        "themes": [],
+        "category": "work"
     },
     "csh": {
         "title": "Computer Science House",
         "descript": "",
-        "themes": []
+        "themes": [],
+        "category": "adventure"
     },
     "nasa": {
         "title": "NASA",
         "descript": "",
-        "themes": []
+        "themes": [],
+        "category": "work"
     },
     "surnameStudies": {
         "title": "Surname Studies",
         "descript": "",
-        "themes": []
+        "themes": [],
+        "category": "project"
     },
     "microsoft": {
         "title": "Applied Science",
         "descript": "",
-        "themes": []
+        "themes": [],
+        "category": "work"
     },
     "businessCard": {
         "title": "PCB Business Card",
         "descript": "",
-        "themes": []
+        "themes": [],
+        "category": "project"
     },
     "launch": {
         "title": "Launch Initiative",
         "descript": "",
-        "themes": []
+        "themes": [],
+        "category": "project"
     },
     "heatTransfer": {
         "title": "Curiosity (almost) arrested the cat",
         "descript": "",
-        "themes": []
+        "themes": [],
+        "category": "project"
     },
     "ti": {
         "title": "Bureaucracy is an illusion",
         "descript": "",
-        "themes": []
+        "themes": [],
+        "category": "work"
     },
     "makerClass": {
         "title": "Breaking boundaries",
         "descript": "",
-        "themes": []
+        "themes": [],
+        "category": "project"
     },
     "orientation": {
         "title": "Rule-based autism",
         "descript": "",
-        "themes": []
+        "themes": [],
+        "category": "adventure"
     },
     "nepaliKitchen": {
         "title": "Nepali Kitchen",
         "descript": "",
-        "themes": []
+        "themes": [],
+        "category": "adventure"
     },
     "industrialDesign": {
         "title": "Industrial Design",
         "descript": "",
-        "themes": []
+        "themes": [],
+        "category": "adventure"
     },
     "mit": {
         "title": "Kenny Kim, MIT Student",
         "descript": "",
-        "themes": []
+        "themes": [],
+        "category": "adventure"
     },
     "gradParty": {
         "title": "Graduation Party",
         "descript": "",
-        "themes": []
+        "themes": [],
+        "category": "project"
     },
     "turkiye": {
         "title": "Bugün Güzel",
         "descript": "",
-        "themes": []
+        "themes": [],
+        "category": "adventure"
     },
     "spacex": {
         "title": "SpaceX",
         "descript": "",
-        "themes": []
+        "themes": [],
+        "category": "work"
     },
     "personalWebsite": {
         "title": "Personal Website",
         "descript": "",
-        "themes": []
+        "themes": [],
+        "category": "project"
     },
     "contact": {
         "title": "Let's Do It",
         "descript": "What are you waiting for? We can do something awesome...",
-        "themes": []
+        "themes": [],
+        "category": "adventure"
     }
 }

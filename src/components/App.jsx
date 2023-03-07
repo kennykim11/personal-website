@@ -1,15 +1,17 @@
 import {Nav} from "./Nav"
-import {Timeline} from "./Timeline"
+import {CardNav} from "./CardNav"
 import {CardArea} from "./CardArea"
 import './styles.scss'
 
 export function App() {
     return (<div id="frame">
+        <Nav/>
         <div id="main">
-            <Nav/>
             <div id="vdivider"/>
-            <Timeline/>
-            <CardArea/>
+            <div id="detail">
+                <CardNav/>
+                <CardArea/>
+            </div>
         </div>
     </div>)
 }

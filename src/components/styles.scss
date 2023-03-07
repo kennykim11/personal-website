@@ -27,6 +27,8 @@ body {
     font-family: $primary-type, sans-serif;
     margin: 0;
     color: $contrast;
+    background: radial-gradient(
+        100% 138.89% at 100% 51.9%, #E0EDED 0%, #FDFDFD 100%);
 }
 
 h1 {
@@ -74,10 +76,11 @@ p {
 
 
 // === IDS ===
+
 #frame {
     max-width: 1440px;
+    height: 100vh;
     margin: auto;
-    border: 1px solid red;
     padding: $frame-padding;
 }
 
@@ -85,7 +88,6 @@ p {
     float: left;
     width: 200px;
     height: $full-height;
-    background-color: #F3BA38;
     margin-right: $margin-right-spacing;
 
     #headshotArea {
@@ -134,6 +136,17 @@ p {
     }
 }
 
+#main {
+    height: 100%;
+}
+
+#detail {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
 #vdivider {
     float: left;
     position: relative;
@@ -144,18 +157,105 @@ p {
     margin-right: $margin-right-spacing;
 }
 
+#cardNav {
+    flex: 0 1 400px;
+    display: flex;
+    flex-flow: column;
+    height: $full-height;
+}
+    
+#filterArea {
+    flex: 0 1 155px;
+
+    #searchbarArea{
+        width: 400px;
+        height: 40px;
+        background-color: $muted;
+        border-radius: 10px;
+        display: table-cell;
+        vertical-align: middle;
+
+        #searchbar {
+            width: 90%;
+            height: 30px;
+            background: transparent;
+            border: none;
+            outline: none;
+            font-family: $primary-type;
+            margin-left: 10px;
+        }
+    }
+
+    .filterSpan {
+        height: 40px;
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .filter {
+        position: relative;
+        display: table;
+        height: 16px;
+
+        .filterWrapper {
+            display: table-cell;
+            vertical-align: middle;
+            height: 100%;
+
+            .filterIcon {
+                width: 24px;
+                height: 16px;
+                border-radius: 8px;
+                background-color: #008B84;
+                margin-right: 5px;
+            }
+        }
+
+        .filterText {
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        h4 {
+            align-items: center;
+            margin: 0 0;
+            white-space: pre-line;
+        }
+    }
+}
+
+#hdivider {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    height: 0;
+    border: 2px solid #008B84;
+    border-radius: 2px;
+    flex: 0 1 auto;
+}
+
 #timeline {
-    float: left;
-    width: 400px;
-    background-color: #B76AEF;
+    background-color: #5781EF;
+    flex: 1 1 auto;
 }
 
 #cardArea {
-    float: left;
-    max-width: 840px;
-    background-color: #F3BA38;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px 15px;
+    gap: 15px;
+    height: $full-height;
+
+    /* Brand/Muted */
+
+    background: $muted;
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
 }
 
-// .alert {
-//   border: 1px solid $border-dark;
-// }
+#card {
+    display: flex;
+    flex-direction: row;
+}

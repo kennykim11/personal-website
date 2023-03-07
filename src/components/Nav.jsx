@@ -9,11 +9,11 @@ export function Nav() {
             <h2 id="name">KENNY KIM</h2>
         </div>
         <div id="navLinkArea">
-            <h2 class="navLink" id="navLink_stories">STORIES</h2>
-            <h2 class="navLink" id="navLink_summary">SUMMARY</h2>
-            <h2 class="navLink" id="navLink_testim">TESTIMONIALS</h2>
-            <h2 class="navLink" id="navLink_tools">TOOLS</h2>
-            <h2 class="navLink" id="navLink_contact">CONTACT</h2>
+            <h2 className="navLink" id="navLink_stories">STORIES</h2>
+            <h2 className="navLink" id="navLink_summary">SUMMARY</h2>
+            <h2 className="navLink" id="navLink_testim">TESTIMONIALS</h2>
+            <h2 className="navLink" id="navLink_tools">TOOLS</h2>
+            <h2 className="navLink" id="navLink_contact">CONTACT</h2>
         </div>
     </div>
 }
