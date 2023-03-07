@@ -1,0 +1,140 @@
+// === CONSTANTS ===
+
+// =Colors=
+$neutral:   #FDFDFD;
+$contrast:  #25313F;
+$primary:   #008B84;
+$highlight: #437477;
+$muted:     #F2F6F6;
+$accent1:   #B76AEF;
+$accent2:   #5C5C5C;
+$accent3:   #F3BA38;
+$accent4:   #5781EF;
+//$border-dark: rgba($base-color, 0.88);
+
+// =Fonts=
+$primary-type: "Raleway";
+
+// =Sizes=
+$frame-padding: 20px;
+$full-height: calc(100vh - (2 * $frame-padding));
+
+
+
+// === ELEMENTS ===
+body {
+    font-family: $primary-type, sans-serif;
+    margin: 0;
+    color: $contrast;
+}
+
+h1 {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 56px;
+}
+
+h2 {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 35px;
+    /* identical to box height, or 146% */
+}
+
+h3 {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    /* identical to box height */
+}
+
+h4 {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    /* identical to box height */
+}
+
+p {
+    font-family: 'Titillium Web', 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+}
+
+
+// === IDS ===
+#frame {
+    max-width: 1440px;
+    margin: auto;
+    border: 1px solid red;
+    padding: $frame-padding;
+}
+
+#nav {
+    float: left;
+    width: 200px;
+    height: $full-height;
+    background-color: #F3BA38;
+    margin-right: 20px;
+
+    #headshotArea {
+        $headshot-size: 160px;
+        $headshot-background-padding: 2px;
+        padding: $headshot-background-padding;
+        margin: auto;
+        width: $headshot-size + $headshot-background-padding;
+        height: $headshot-size + $headshot-background-padding;
+        background-color: $muted;
+        border-radius: 50%;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        
+        #headshotImage {
+            display: block;
+            margin: auto;
+            margin-top: calc($headshot-background-padding/2);
+            width: $headshot-size;
+            height: $headshot-size;
+            border-radius: 50%;
+        }
+    }
+
+    #name {
+        text-align: center;
+    }
+}
+
+#vdivider {
+    float: left;
+    position: relative;
+    width: 0;
+    height: $full-height;
+    
+    border: 2px solid #008B84;
+    border-radius: 2px;
+}
+
+#timeline {
+    float: left;
+    width: 400px;
+    background-color: #B76AEF;
+}
+
+#cardArea {
+    float: left;
+    max-width: 840px;
+    background-color: #F3BA38;
+}
+
+// .alert {
+//   border: 1px solid $border-dark;
+// }
