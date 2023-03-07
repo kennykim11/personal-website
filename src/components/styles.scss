@@ -18,6 +18,7 @@ $primary-type: "Raleway";
 // =Sizes=
 $frame-padding: 20px;
 $full-height: calc(100vh - (2 * $frame-padding));
+$margin-right-spacing: 10px;
 
 
 
@@ -31,7 +32,7 @@ body {
 h1 {
     font-family: 'Raleway';
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 48px;
     line-height: 56px;
 }
@@ -85,7 +86,7 @@ p {
     width: 200px;
     height: $full-height;
     background-color: #F3BA38;
-    margin-right: 20px;
+    margin-right: $margin-right-spacing;
 
     #headshotArea {
         $headshot-size: 160px;
@@ -111,6 +112,26 @@ p {
     #name {
         text-align: center;
     }
+
+    #navLinkArea {
+        position: absolute;
+        bottom: 0px;
+
+        $color-transition-time: 0.4s;
+        .navLink{
+            color: $contrast;
+            -webkit-transition: color $color-transition-time;
+            -moz-transition:    color $color-transition-time;
+            -ms-transition:     color $color-transition-time;
+            -o-transition:      color $color-transition-time;
+            transition:         color $color-transition-time;
+            transition-timing-function: ease-out;
+        }
+        .navLink:hover {
+            color: $primary;
+            cursor: pointer;
+        }
+    }
 }
 
 #vdivider {
@@ -118,9 +139,9 @@ p {
     position: relative;
     width: 0;
     height: $full-height;
-    
     border: 2px solid #008B84;
     border-radius: 2px;
+    margin-right: $margin-right-spacing;
 }
 
 #timeline {
