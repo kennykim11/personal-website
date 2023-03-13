@@ -14,12 +14,14 @@ $accent4:   #5781EF;
 
 // =Fonts=
 $primary-type: "Raleway";
+$paragraph-type: "Titillium Web";
 
 // =Sizes=
 $frame-padding: 20px;
 $frame-height: calc(100vh - (2 * $frame-padding));
 $margin-right-spacing: 10px;
 $nav-width: 200px;
+$cardNav-width: 400px;
 
 // =Animations=
 $color-transition-time: 0.4s;
@@ -49,7 +51,7 @@ body {
 }
 
 h1 {
-    font-family: 'Raleway';
+    font-family: $primary-type;
     font-style: normal;
     font-weight: 500;
     font-size: 48px;
@@ -57,7 +59,7 @@ h1 {
 }
 
 h2 {
-    font-family: 'Raleway';
+    font-family: $primary-type;
     font-style: normal;
     font-weight: 500;
     font-size: 24px;
@@ -66,7 +68,7 @@ h2 {
 }
 
 h3 {
-    font-family: 'Raleway';
+    font-family: $primary-type;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
@@ -75,7 +77,7 @@ h3 {
 }
 
 h4 {
-    font-family: 'Raleway';
+    font-family: $primary-type;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -84,7 +86,7 @@ h4 {
 }
 
 p {
-    font-family: 'Titillium Web', 'Raleway', sans-serif;
+    font-family: $paragraph-type, $primary-type, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -107,14 +109,14 @@ a {
     height: $frame-height;
     margin: auto;
     padding-top: $frame-padding;
-    
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
 }
 
 #nav {
-    float: left;
-    width: $nav-width;
+    flex: 0 0 $nav-width;
     height: $frame-height;
-    margin-right: $margin-right-spacing;
 
     #headshotArea {
         $headshot-size: 160px;
@@ -163,6 +165,7 @@ a {
 }
 
 #main {
+    flex: 1 1 auto;
     height: 100%;
     display: flex;
     flex-direction: row;
@@ -170,17 +173,15 @@ a {
 }
 
 #vdivider {
-    float: left;
+    flex: 0 0 0px;
     position: relative;
-    width: 0;
-    height: $frame-height;
+    height: calc($frame-height - 4px);
     border: 2px solid #008B84;
     border-radius: 2px;
-    margin-right: $margin-right-spacing;
 }
 
 #cardNav {
-    flex: 0 1 400px;
+    flex: 0 0 $cardNav-width;
     display: flex;
     flex-flow: column;
     height: $frame-height;
@@ -196,6 +197,7 @@ a {
         border-radius: 10px;
         display: table-cell;
         vertical-align: middle;
+        border: $primary solid 1px;
 
         #searchbar {
             width: 90%;
@@ -347,18 +349,38 @@ a {
     }
 }
 
-#detailView {
-    display: flex;
-    flex-direction: row;
-}
-
-#detailBuffer {
-    height: 0px;
-    flex: 0 0 $nav-width + $margin-right-spacing + $margin-right-spacing;
-}
-
-#detailArea {
+#detail {
     flex: 1 1 auto;
-    background-color: #5781EF;
-    height: calc(100vh - $frame-padding);
+}
+
+#storyCardHolder {
+    margin: auto;
+    max-width: 763px;
+}
+
+#storyContents {
+    max-width: 900px;
+    margin: auto;
+    font-family: $paragraph-type;
+    font-size: 18px;
+}
+
+#summaryView {
+    background-color: $neutral;
+    opacity: 0.95;
+    width: $nav-width + $cardNav-width + calc(3 * $margin-right-spacing);
+    height: 100%;
+    position:relative;
+    top: -100%;
+    left: calc(-1 * $nav-width - (3 * $margin-right-spacing));
+}
+
+.closeButton{
+    box-sizing: border-box;
+
+    width: 50px;
+    height: 50px;
+
+    border: 3px solid $contrast;
+    border-radius: 20px;
 }

@@ -8,7 +8,7 @@ export function Card(props) {
     }
 
     let imageSource = "../assets/thumbnails/"+props.story.id+".png"
-    return <Link to={'/'+props.story.id}>
+    return <Link to={'/story/'+props.story.id}>
         <div className="card" onClick={greetUser}>
             <div className="cardThemeBar">
                 {props.story.themes.map((theme) => {

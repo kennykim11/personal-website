@@ -1,9 +1,9 @@
 import {Nav} from "./Nav"
 import {CardNav} from "./CardNav"
 import {CardArea} from "./CardArea"
-import {DetailView} from "./DetailView"
 import {Suspense, lazy} from "react"
-import {BrowserRouter, Routes, Route, createBrowserRouter} from "react-router-dom"
+import {BrowserRouter, Routes, Route} from "react-router-dom"
+import {Link} from "react-router-dom"
 
 import './styles.scss'
 
@@ -31,12 +31,6 @@ export function App() {
     // }
     // const router = createBrowserRouter
 
-    if (debugMode=='detail') {
-        return <div id="frame">
-            <DetailView/>
-        </div>
-    }
-
     return <BrowserRouter>
         <div id="frame">
             <Nav/>
@@ -44,6 +38,19 @@ export function App() {
             <Suspense fallback={<div id="loadingScreen">Loading...</div>}>
                 <Routes>
                     <Route path="/" element={
+                        <div>
+                            <div id="main">
+                                <CardNav/>
+                                <CardArea stories={stories}/>
+                            </div>
+                            <div id="summaryView">
+                                <Link to="/stories">
+                                    <div className="closeButton"/>
+                                </Link>
+                            </div>
+                        </div>
+                    }/>
+                    <Route path="/stories" element={
                         <div id="main">
                             <CardNav/>
                             <CardArea stories={stories}/>
@@ -51,9 +58,9 @@ export function App() {
                     }/>
                     {Object.keys(stories).map((id) => {
                         const PageComponent = lazy(stories[id].page)
-                        return <Route path={"/"+id} key={id} element={
+                        return <Route path={"/story/"+id} key={id} element={
                                 <div id="detail">
-                                    <PageComponent/>
+                                    <PageComponent story={stories[id]}/>
                                 </div>
                             }/>
                     })}
