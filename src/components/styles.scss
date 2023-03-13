@@ -19,6 +19,7 @@ $primary-type: "Raleway";
 $frame-padding: 20px;
 $frame-height: calc(100vh - (2 * $frame-padding));
 $margin-right-spacing: 10px;
+$nav-width: 200px;
 
 // =Animations=
 $color-transition-time: 0.4s;
@@ -42,6 +43,7 @@ body {
     font-family: $primary-type, sans-serif;
     margin: 0;
     color: $contrast;
+    height: 100vh;
     background: radial-gradient(
         100% 138.89% at 100% 51.9%, #E0EDED 0%, #FDFDFD 100%);
 }
@@ -89,6 +91,14 @@ p {
     line-height: 27px;
 }
 
+a {
+    color: $contrast;
+    text-decoration: none;
+    &:hover {
+        color: $contrast;
+    }
+}
+
 
 // === IDS ===
 
@@ -97,12 +107,12 @@ p {
     height: $frame-height;
     margin: auto;
     padding-top: $frame-padding;
-    overflow-y: hidden;
+    
 }
 
 #nav {
     float: left;
-    width: 200px;
+    width: $nav-width;
     height: $frame-height;
     margin-right: $margin-right-spacing;
 
@@ -153,10 +163,6 @@ p {
 }
 
 #main {
-    height: 100%;
-}
-
-#detail {
     height: 100%;
     display: flex;
     flex-direction: row;
@@ -227,7 +233,6 @@ p {
                 width: 24px;
                 height: 16px;
                 border-radius: 8px;
-                background-color: #008B84;
                 margin-right: 5px;
             }
         }
@@ -256,6 +261,7 @@ p {
 
 #timeline {
     background-color: #5781EF;
+    opacity: 0.2;
     flex: 1 1 auto;
 }
 
@@ -339,4 +345,20 @@ p {
             margin: 0;
         }
     }
+}
+
+#detailView {
+    display: flex;
+    flex-direction: row;
+}
+
+#detailBuffer {
+    height: 0px;
+    flex: 0 0 $nav-width + $margin-right-spacing + $margin-right-spacing;
+}
+
+#detailArea {
+    flex: 1 1 auto;
+    background-color: #5781EF;
+    height: calc(100vh - $frame-padding);
 }

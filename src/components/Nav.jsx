@@ -1,3 +1,5 @@
+import {Link} from "react-router-dom"
+
 import HeadshotImage from '../assets/Suit_Edited_cropped_scaled.png'
 
 export function Nav() {
@@ -9,7 +11,7 @@ export function Nav() {
             <h2 id="name">KENNY KIM</h2>
         </div>
         <div id="navLinkArea">
-            <h2 className="navLink" id="navLink_stories">STORIES</h2>
+            <Link to='/'><h2 className="navLink" id="navLink_stories">STORIES</h2></Link>
             <h2 className="navLink" id="navLink_summary">SUMMARY</h2>
             <h2 className="navLink" id="navLink_testim">TESTIMONIALS</h2>
             <h2 className="navLink" id="navLink_tools">TOOLS</h2>

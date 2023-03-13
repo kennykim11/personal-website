@@ -7,15 +7,15 @@ export function FilterArea() {
         </div>
         <div className="filterGap"/>
         <span className="filterSpan">
-            <Filter name="explo" text="Exploration"/>
-            <Filter name="collab" text="Collaboration"/>
-            <Filter name="prob" text="Problem\nSolving"/>
+            <Filter name="explo" text="Exploration" theme="explo"/>
+            <Filter name="collab" text="Collaboration" theme="collab"/>
+            <Filter name="prob" text="Problem\nSolving" theme="prob"/>
         </span>
         <div className="filterGap"/>
         <span className="filterSpan">
-            <Filter name="adventure" text="Adventure"/>
-            <Filter name="work" text="Work\nExperience"/>
-            <Filter name="project" text="Project"/>
+            <Filter name="work" text="Work\nExperience" shape="triangle"/>
+            <Filter name="adventure" text="Adventure" shape="square"/>
+            <Filter name="project" text="Project" shape="circle"/>
         </span>
     </div>
 }
