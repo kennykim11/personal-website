@@ -37,6 +37,20 @@ $color-transition-time: 0.4s;
 .prob {
     background-color: $accent4;
 }
+.work {
+    width: 24px;
+    height: 24px;
+    //Supposed to be a triangle...
+}
+.adventure {
+    width: 24px;
+    height: 24px;
+}
+.project {
+    width: 24px;
+    height: 24px;
+    border-radius: 12px;
+}
 
 
 
@@ -194,6 +208,10 @@ a {
 #filterArea {
     flex: 0 1 155px;
 
+    .hidden {
+        opacity: 0.2;
+    }
+
     #searchbarArea{
         width: 400px;
         height: 40px;
@@ -235,11 +253,15 @@ a {
             vertical-align: middle;
             height: 100%;
 
-            .filterIcon {
+            .pill {
                 width: 24px;
                 height: 16px;
                 border-radius: 8px;
+            }
+
+            .filterIcon {
                 margin-right: 5px;
+                border: 1 solid $highlight;
             }
         }
 
@@ -371,16 +393,26 @@ a {
 
 #summaryView {
     background-color: $neutral;
-    opacity: 0.95;
-    width: $nav-width + $cardNav-width + calc(3 * $margin-right-spacing);
+    opacity: 0.90;
+    width: $nav-width + $cardNav-width + calc(4 * $margin-right-spacing);
     height: 100%;
     position:relative;
     top: -100%;
     left: calc(-1 * $nav-width - (3 * $margin-right-spacing));
+
+    #summaryTextArea {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 }
 
 .closeButton{
+    position: absolute;
     box-sizing: border-box;
+    top: 10px;
+    right: 10px;
 
     width: 50px;
     height: 50px;

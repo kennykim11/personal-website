@@ -5,3 +5,4 @@
 - Testimonials
 - Relations drawing algorithm
 - Tessalation background
+- About other Kenny Kims

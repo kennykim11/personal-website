@@ -1,5 +1,6 @@
 import {Nav} from "./Nav"
 import {Main} from "./Main"
+import {Summary} from "./Summary"
 
 import {Suspense, lazy} from "react"
 import {BrowserRouter, Routes, Route, Link} from "react-router-dom"
@@ -21,11 +22,7 @@ export function App() {
                         <Route path="/" element={
                             <div>
                                 <Main/>
-                                <div id="summaryView">
-                                    <Link to="/stories">
-                                        <div className="closeButton"/>
-                                    </Link>
-                                </div>
+                                <Summary/>
                             </div>
                         }/>
 
