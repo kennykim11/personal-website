@@ -160,6 +160,10 @@ a {
                 color: $primary;
                 cursor: pointer;
             }
+            
+            a.active {
+                opacity: 0.5;
+            }
         }
     }
 }
