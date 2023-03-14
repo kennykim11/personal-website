@@ -1,9 +1,26 @@
 import {Filter} from './Filter.jsx'
 
+import {Storage} from './Storage.jsx'
+
+var searchTerm = ''
+function search() {
+    Object.keys(Storage.stories).map((id) => {})
+}
+
+function SearchBar() {
+    const handleKeyDown = (event) => {
+        if (event.key === 'Enter') {
+            searchTerm = event.target.value
+            search()
+        }
+    }
+    return <input id="searchbar" type="text" placeholder="Search.." onKeyDown={handleKeyDown}/>
+}
+
 export function FilterArea() {
     return <div id="filterArea">
         <div id="searchbarArea">
-            <input id="searchbar" type="text" placeholder="Search.."/>
+            <SearchBar/>
         </div>
         <div className="filterGap"/>
         <span className="filterSpan">

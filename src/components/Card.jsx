@@ -1,24 +1,22 @@
 import {Link} from "react-router-dom"
+import {Storage} from "./Storage"
 
-import HeadshotImage from '../assets/thumbnails/=thumbnail_placeholder.png'
+import ThumbnailPlaceholder from '../assets/thumbnails/=thumbnail_placeholder.png'
 
 export function Card(props) {
-    function greetUser() {
-      console.log(props.story.id);
-    }
-
-    let imageSource = "../assets/thumbnails/"+props.story.id+".png"
-    return <Link to={'/story/'+props.story.id}>
-        <div className="card" onClick={greetUser}>
+    let story = Storage.stories[storyId]
+    let imageSource = story.thumbnail
+    return <Link to={'/story/'+story.id}>
+        <div className="card">
             <div className="cardThemeBar">
-                {props.story.themes.map((theme) => {
-                    return <div className={"cardThemeBlock " + theme}/>
+                {story.themes.map((theme) => {
+                    return <div className={"cardThemeBlock " + theme} key={theme}/>
                 })}
             </div>
-            <img className="thumbnail" src={imageSource} onError={(e)=>{e.target.onError = null; e.target.src = HeadshotImage}}/>
+            <img className="thumbnail" src={imageSource} onError={(e)=>{e.target.onError = null; e.target.src = ThumbnailPlaceholder}}/>
             <div className="cardTextArea">
-                <h2 className="cardTitle">{props.story.title}</h2>
-                <h3 className="cardDescript">{props.story.descript}</h3>
+                <h2 className="cardTitle">{story.title}</h2>
+                <h3 className="cardDescript">{story.descript}</h3>
             </div>
         </div>
     </Link>

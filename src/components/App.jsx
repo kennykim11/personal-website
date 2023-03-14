@@ -1,37 +1,23 @@
 import {Nav} from "./Nav"
-import {CardNav} from "./CardNav"
-import {CardArea} from "./CardArea"
-import {Suspense, lazy} from "react"
-import {BrowserRouter, Routes, Route} from "react-router-dom"
+import {Suspense, lazy, useEffect} from "react"
+import {BrowserRouter, Routes, Route, useLocation} from "react-router-dom"
 import {Link} from "react-router-dom"
+import {MainView} from "./MainView"
+import {Storage, StorageProvider} from "./Storage"
 
 import './styles.scss'
 
-import stories from '../stories.js'
-
 let debugMode = '';
+storage = new Storage()
 
-function cleanStories(stories) {
-    for (var id in stories) {
-        stories[id].id = id;
-        if (stories[id].descript == "") stories[id].descript = stories[id].title + " description"
-        if (stories[id].themes.length == 0) stories[id].themes = ["explo", "collab", "prob"]
-    }
-    return stories
-}
+function Frame() {
 
-export function App() {
-    stories = cleanStories(stories)
-    // routerPaths = Object.keys(stories).map((id) => {
-    //     return {
-    //         path: "/"+id,
-    //         loader: stories[id].page,
-    //         elementl
-    //     }
-    // }
-    // const router = createBrowserRouter
+    const location = useLocation();
+    useEffect(() => {
+        storage.setCurrentPage(location.pathname)
+    }, [location])
 
-    return <BrowserRouter>
+    return <StorageProvider storeage={storage}>
         <div id="frame">
             <Nav/>
             <div id="vdivider"/>
@@ -39,10 +25,7 @@ export function App() {
                 <Routes>
                     <Route path="/" element={
                         <div>
-                            <div id="main">
-                                <CardNav/>
-                                <CardArea stories={stories}/>
-                            </div>
+                            <MainView/>
                             <div id="summaryView">
                                 <Link to="/stories">
                                     <div className="closeButton"/>
@@ -50,22 +33,25 @@ export function App() {
                             </div>
                         </div>
                     }/>
-                    <Route path="/stories" element={
-                        <div id="main">
-                            <CardNav/>
-                            <CardArea stories={stories}/>
-                        </div>
-                    }/>
-                    {Object.keys(stories).map((id) => {
-                        const PageComponent = lazy(stories[id].page)
+                    //TODO Look into Dynamic Routing (https://blog.webdevsimplified.com/2022-07/react-router/#dynamic-routing)
+                    <Route path="/stories" element={<MainView/>}/>
+                    {Object.keys(storage.stories).map((id) => {
+                        const PageComponent = lazy(storage.stories[id].page)
                         return <Route path={"/story/"+id} key={id} element={
                                 <div id="detail">
-                                    <PageComponent story={stories[id]}/>
+                                    <PageComponent story={storage.stories[id]}/>
                                 </div>
                             }/>
                     })}
                 </Routes>
             </Suspense>
         </div>
+    </StorageProvider>
+}
+
+export function App() {
+
+    return <BrowserRouter>
+        <Frame/>
     </BrowserRouter>
 }
