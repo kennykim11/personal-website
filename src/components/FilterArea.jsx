@@ -1,9 +1,24 @@
 import {Filter} from './Filter.jsx'
 
+var searchTerm = ''
+function filter() {
+    Object.keys([]).map((id) => {})
+}
+
+function Searchbar() {
+    const handleKeyDown = (event) => {
+        if (event.key === 'Enter') {
+            searchTerm = event.target.value
+            filter()
+        }
+    }
+    return <input id="searchbar" type="text" placeholder="Search.."/>
+}
+
 export function FilterArea() {
     return <div id="filterArea">
         <div id="searchbarArea">
-            <input id="searchbar" type="text" placeholder="Search.."/>
+            
         </div>
         <div className="filterGap"/>
         <span className="filterSpan">
