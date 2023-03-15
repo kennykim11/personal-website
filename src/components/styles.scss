@@ -261,7 +261,7 @@ a {
 
             .filterIcon {
                 margin-right: 5px;
-                border: 1 solid $highlight;
+                border: 1 solid $primary;
             }
         }
 
@@ -280,7 +280,6 @@ a {
 
 #hdivider {
     margin-top: 5px;
-    margin-bottom: 5px;
     height: 0;
     border: 2px solid #008B84;
     border-radius: 2px;
@@ -296,6 +295,7 @@ a {
 #cardArea {
     flex: 1 1 auto;
     display: flex;
+    // justify-content: space-evenly;
     flex-direction: column;
     padding: 10px 20px 15px 15px;
     gap: 15px;
@@ -405,6 +405,52 @@ a {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        width: 90%;
+    }
+
+    #summaryText {
+        text-align: center;
+    }
+
+    #summaryButtonArea {
+        position: absolute;
+        bottom: 150px;
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+
+        .iconOutline {
+            flex: 0 0 auto;
+        }
+    }
+}
+
+.iconOutline {
+    width: 50px;
+    height: 50px;
+    outline: 3 solid $primary;
+    border-radius: 10px;
+
+    .mute {
+        opacity: 0.5;
+    }
+
+    .icon {
+        margin:auto;
+        height: 100%;
+
+        ion-icon {
+            color: $primary;
+            height: 100%;
+            width:100%;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+        }
+
+        &:hover {
+            opacity: 0.5;
+        }
     }
 }
 
@@ -413,10 +459,4 @@ a {
     box-sizing: border-box;
     top: 10px;
     right: 10px;
-
-    width: 50px;
-    height: 50px;
-
-    border: 3px solid $contrast;
-    border-radius: 20px;
 }

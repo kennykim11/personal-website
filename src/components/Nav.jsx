@@ -15,7 +15,7 @@ export function Nav() {
             <NavLink to='/'><h2 className="navLink" id="navLink_summary">SUMMARY</h2></NavLink>
             <h2 className="navLink" id="navLink_testim">TESTIMONIALS</h2>
             <h2 className="navLink" id="navLink_tools">TOOLS</h2>
-            <h2 className="navLink" id="navLink_contact">CONTACT</h2>
+            <NavLink to="/story/contact"><h2 className="navLink" id="navLink_contact">CONTACT</h2></NavLink>
         </div>
     </div>
 }

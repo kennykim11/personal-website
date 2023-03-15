@@ -22,7 +22,7 @@ export class Storage {
         return this.displayedStories
     }
     resetDisplayedStories() {
-        this.displayedStories = storiesArray
+        this.displayedStories = this.storiesFullIdList
         return this.displayedStories
     }
 

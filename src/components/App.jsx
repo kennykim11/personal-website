@@ -20,7 +20,7 @@ export function App() {
                     <Routes>
 
                         <Route path="/" element={
-                            <div>
+                            <div style={{width: "100%"}}>
                                 <Main/>
                                 <Summary/>
                             </div>

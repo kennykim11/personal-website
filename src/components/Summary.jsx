@@ -1,11 +1,12 @@
 
 import {StorageContext} from "./Storage"
+import {IconButton} from "./IconButton"
 
-import React, {useContext} from 'react'
+import React, {useContext, useState, useEffect, useRef} from 'react'
 import {observer} from "mobx-react-lite"
-import {Link} from "react-router-dom"
+import {Link, useNavigate} from "react-router-dom"
 
-summaryInfo = [
+const summaryInfo = [
     {
         text: "For the last seven years, I've been a journey of \"What if\".",
         stories: ["seventhDay", "sois", "friendzone"]
@@ -42,13 +43,58 @@ summaryInfo = [
 
 const Summary = observer(() => {
     const storage = useContext(StorageContext);
-    return <div id="summaryView">
-        <Link to="/stories">
-            <div className="closeButton"/>
+    const navigate = useNavigate();
+
+    const [currentPage, setCurrentPage] = useState(0)
+
+    function changePage(direction) {
+        if (direction == "next") {
+            if (currentPage == summaryInfo.length-1) {
+                navigate("/stories")
+                storage.resetDisplayedStories()
+            }
+            else {
+                setCurrentPage(currentPage+1)
+            }
+        }
+        if (direction == "prev") {
+            if (currentPage == 0) {
+                navigate("/stories")
+                storage.resetDisplayedStories()
+            }
+            else {
+                setCurrentPage(currentPage-1)
+            }
+        }
+    }
+
+    // const leftButton = useRef(null)
+    // const rightButton = useRef(null)
+    function keyDownHandler(event) {
+        console.log(event)
+        // if (event.key == "ArrowLeft") leftButton.className += " mute"
+    }
+
+    const ref = useRef(null);
+    useEffect(() => {
+        //ref.current.focus();
+    }, []);
+
+
+    return <div id="summaryView" ref={ref} tabIndex={-1} onKeyDown={keyDownHandler}>
+        <Link className="closeButton" to="/stories">
+            <IconButton iconName="close" clickHandler={()=>{setCurrentPage(0)}}/>
         </Link>
         <div id="summaryTextArea">
-            <h1 id="summaryText">Hello</h1>
+            <h1 id="summaryText">
+                {summaryInfo[currentPage].text}
+            </h1>
         </div>
+        <div id="summaryButtonArea">
+            <IconButton iconName="caret-back" clickHandler={()=>{changePage('prev')}}/>
+            <IconButton iconName="caret-forward" clickHandler={()=>{changePage('next')}}/>
+        </div>
+        {(()=>{storage.setDisplayedStories(summaryInfo[currentPage].stories)})()}
     </div>
 })
 

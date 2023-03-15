@@ -1,8 +1,10 @@
-- Clicking on card goes to new page
-- Cards loading correct image
 - Hovering card highlights text
-- Story
+- Summaru
 - Testimonials
 - Relations drawing algorithm
 - Tessalation background
 - About other Kenny Kims
+- Space cards evenly until overflow
+- Summary
+    - Animations
+    - Use keyboard to navigate

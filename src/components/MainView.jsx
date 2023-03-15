@@ -1,7 +1,7 @@
 import {CardNav} from "./CardNav"
 import {CardArea} from "./CardArea"
-import {Storage, useStorage} from "./Storage"
-import {observer, Observer} from "mobx-react-lite"
+import {useStorage} from "./Storage"
+import {observer} from "mobx-react-lite"
 
 const MainView = observer(() => {
     const storage = useStorage()
