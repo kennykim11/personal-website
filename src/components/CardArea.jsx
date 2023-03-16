@@ -8,9 +8,11 @@ import {observer} from 'mobx-react-lite'
 const CardArea = observer(() => {
     const storage = useContext(StorageContext);
     return <div id="cardArea">
-        {storage.displayedStories.map((id) => {
-            return <Card story={storage.stories[id]} key={id}/>
-        })}
+        <div id="cardAreaContents">
+            {storage.displayedStories.map((id) => {
+                return <Card story={storage.stories[id]} key={id}/>
+            })}
+        </div>
     </div>
 })
 

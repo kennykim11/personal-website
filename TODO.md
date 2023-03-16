@@ -1,5 +1,4 @@
 - Hovering card highlights text
-- Summaru
 - Testimonials
 - Relations drawing algorithm
 - Tessalation background
@@ -8,3 +7,7 @@
 - Summary
     - Animations
     - Use keyboard to navigate
+- Main menu
+    - Card tool tip about themes
+- Story view
+    - Close button absolute to frame, not window

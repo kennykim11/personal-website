@@ -294,19 +294,22 @@ a {
 
 #cardArea {
     flex: 1 1 auto;
-    display: flex;
-    // justify-content: space-evenly;
-    flex-direction: column;
     padding: 10px 20px 15px 15px;
-    gap: 15px;
     height: calc($frame-height - 25px);
-    margin-bottom: -60px;
 
     background: $muted;
     box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
 
+}
+
+#cardAreaContents {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    gap: 15px;
     overflow-y: scroll;
+    // justify-content: space-evenly;
 }
 
 .card {
@@ -457,6 +460,6 @@ a {
 .closeButton{
     position: absolute;
     box-sizing: border-box;
-    top: 10px;
-    right: 10px;
+    top: 30px;
+    right: 30px;
 }

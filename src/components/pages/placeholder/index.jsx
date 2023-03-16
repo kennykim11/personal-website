@@ -1,7 +1,13 @@
 import { Card } from "../../Card"
+import {IconButton} from "../../IconButton"
+import {Link} from "react-router-dom"
 
 export default function (props) {
     return <div id="storyContents">
+        <Link className="closeButton" to="/stories">
+            <IconButton iconName="close" clickHandler={()=>{setCurrentPage(0)}}/>
+        </Link>
+    
         <div id="storyCardHolder">
             <Card story={props.story}/>
         </div>
