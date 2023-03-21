@@ -88,7 +88,7 @@ export default {
         "themes": ["explo", "collab", "prob"],
         "category": "work",
         "referTo": [],
-		"year": "2022",
+		"year": "2020",
         "thumbnail": new URL('./components/pages/placeholder/thumbnail.png', import.meta.url),
         "page": () => import ('./components/pages/placeholder/index.jsx')
     },

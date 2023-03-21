@@ -9,7 +9,6 @@ import {useContext} from "react"
 export function StoriesMenu() {
     const storage = useContext(StorageContext)
     const [searchParams] = useSearchParams()
-    console.log(storage.summaryMode)
     return <div style={{width: '100%'}}>
         <div id="storiesMenu">
             <CardNav/>

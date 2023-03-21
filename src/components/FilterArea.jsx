@@ -42,7 +42,7 @@ function Searchbar() {
             filterStories()
         }
     }
-    return <input id="searchbar" type="text" placeholder="Search.." onKeyDown={handleKeyDown}/>
+    return <input id="searchbar" type="text" placeholder="Search..." onKeyDown={handleKeyDown}/>
 }
 
 const FilterArea = observer(() => {
