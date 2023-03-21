@@ -18,7 +18,7 @@ export default {
 		"year": "2017",
         "thumbnail": new URL('./components/pages/placeholder/thumbnail.png', import.meta.url),
         "page": async () => {
-            await new Promise(r => setTimeout(r, 5000))
+            await new Promise(r => setTimeout(r, 50000))
             return import ('./components/pages/placeholder/index.jsx')
         }
     },

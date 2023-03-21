@@ -7,12 +7,14 @@ import HeadshotImage from '../assets/Suit_Edited_cropped_scaled.png'
 export function Nav() {
     const storage = useContext(StorageContext)
     return <div id="nav">
-        <div id="homeArea">
-            <div id="headshotArea">
-                <img src={HeadshotImage} id="headshotImage"></img>
+        <Link to="/">
+            <div id="homeArea">
+                <div id="headshotArea">
+                    <img src={HeadshotImage} id="headshotImage"></img>
+                </div>
+                <h2 id="name">KENNY KIM</h2>
             </div>
-            <h2 id="name">KENNY KIM</h2>
-        </div>
+        </Link>
         <div id="navLinkArea">
             <NavLink to='/'><h2 className="navLink" id="navLink_stories">STORIES</h2></NavLink>
             <Link to='/?summary'><h2 className="navLink" id="navLink_summary" onClick={()=>{storage.summaryMode=true}}>SUMMARY</h2></Link>

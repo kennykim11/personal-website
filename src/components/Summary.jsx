@@ -3,6 +3,7 @@ import {StorageContext} from "./Storage"
 import {IconButton} from "./IconButton"
 
 import React, {useContext, useState, useEffect} from 'react'
+import Typist from 'react-typist';
 import {observer} from "mobx-react-lite"
 import {Link, redirect, useNavigate} from "react-router-dom"
 import {faSquareCaretLeft, faSquareCaretRight, faSquareXmark} from '@fortawesome/free-solid-svg-icons'
@@ -83,7 +84,18 @@ const Summary = observer(() => {
         </Link>
         <div id="summaryTextArea">
             <h1 id="summaryText">
-                {summaryInfo[storage.currentPage].text}
+                <Typist key={storage.currentPage} avgTypingDelay={40} startDelay={600}
+                    cursor={{
+                        show: true,
+                        blink: false,
+                        element: "│",
+                        hideWhenDone: false,
+                        hideWhenDoneDelay: 200,
+                    }} 
+                    onTypingDone={(event)=>{
+                        console.log(event)
+                    }}>
+                    {summaryInfo[storage.currentPage].text}</Typist>
             </h1>
         </div>
         <div id="summaryButtonArea">
