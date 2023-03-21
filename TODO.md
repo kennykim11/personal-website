@@ -1,13 +1,12 @@
-- Hovering card highlights text
 - Testimonials
-- Relations drawing algorithm
 - Tessalation background
 - About other Kenny Kims
-- Space cards evenly until overflow
 - Summary
     - Animations
-    - Use keyboard to navigate
+    - First starting page
 - Main menu
     - Card tool tip about themes
+    - Matching scroll of story lists
+    - Relations drawing algorithm
 - Story view
     - Close button absolute to frame, not window

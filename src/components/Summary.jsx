@@ -2,9 +2,11 @@
 import {StorageContext} from "./Storage"
 import {IconButton} from "./IconButton"
 
-import React, {useContext, useState, useEffect, useRef} from 'react'
+import React, {useContext, useState, useEffect} from 'react'
 import {observer} from "mobx-react-lite"
-import {Link, useNavigate} from "react-router-dom"
+import {Link, redirect, useNavigate} from "react-router-dom"
+import {faSquareCaretLeft, faSquareCaretRight, faSquareXmark} from '@fortawesome/free-solid-svg-icons'
+
 
 const summaryInfo = [
     {
@@ -42,59 +44,52 @@ const summaryInfo = [
 ]
 
 const Summary = observer(() => {
-    const storage = useContext(StorageContext);
-    const navigate = useNavigate();
-
-    const [currentPage, setCurrentPage] = useState(0)
+    const storage = useContext(StorageContext)
+    storage.summaryMode = true
+    const navigate = useNavigate()
 
     function changePage(direction) {
-        if (direction == "next") {
-            if (currentPage == summaryInfo.length-1) {
-                navigate("/stories")
+        if (direction === "next") {
+            if (storage.currentPage === summaryInfo.length-1) {
                 storage.resetDisplayedStories()
+                storage.summaryMode = false
+                storage.setCurrentPage(0)
+                navigate("/")
             }
             else {
-                setCurrentPage(currentPage+1)
+                storage.setCurrentPage(storage.currentPage+1)
             }
         }
-        if (direction == "prev") {
-            if (currentPage == 0) {
-                navigate("/stories")
+        if (direction === "prev") {
+            if (storage.currentPage === 0) {
                 storage.resetDisplayedStories()
+                storage.summaryMode = false
+                navigate("/")
             }
             else {
-                setCurrentPage(currentPage-1)
+                storage.setCurrentPage(storage.currentPage-1)
             }
         }
     }
 
-    // const leftButton = useRef(null)
-    // const rightButton = useRef(null)
-    function keyDownHandler(event) {
-        console.log(event)
-        // if (event.key == "ArrowLeft") leftButton.className += " mute"
-    }
-
-    const ref = useRef(null);
     useEffect(() => {
-        //ref.current.focus();
-    }, []);
+        storage.setDisplayedStories(summaryInfo[storage.currentPage].stories)
+    }, [storage.currentPage])
 
 
-    return <div id="summaryView" ref={ref} tabIndex={-1} onKeyDown={keyDownHandler}>
-        <Link className="closeButton" to="/stories">
-            <IconButton iconName="close" clickHandler={()=>{setCurrentPage(0)}}/>
+    return <div id="summaryView">
+        <Link className="closeButton" to="/">
+            <IconButton icon={faSquareXmark} clickHandler={()=>{storage.resetDisplayedStories(); storage.setCurrentPage(0); storage.summaryMode = false; redirect("/")}} keyListener="Backspace"/>
         </Link>
         <div id="summaryTextArea">
             <h1 id="summaryText">
-                {summaryInfo[currentPage].text}
+                {summaryInfo[storage.currentPage].text}
             </h1>
         </div>
         <div id="summaryButtonArea">
-            <IconButton iconName="caret-back" clickHandler={()=>{changePage('prev')}}/>
-            <IconButton iconName="caret-forward" clickHandler={()=>{changePage('next')}}/>
+            <IconButton icon={faSquareCaretLeft} clickHandler={()=>{changePage('prev')}} keyListener="ArrowLeft"/>
+            <IconButton icon={faSquareCaretRight} clickHandler={()=>{changePage('next')}} keyListener="ArrowRight"/>
         </div>
-        {(()=>{storage.setDisplayedStories(summaryInfo[currentPage].stories)})()}
     </div>
 })
 

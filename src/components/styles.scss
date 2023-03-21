@@ -10,6 +10,8 @@ $accent1:   #B76AEF;
 $accent2:   #5C5C5C;
 $accent3:   #F3BA38;
 $accent4:   #5781EF;
+$grad-background: radial-gradient(
+    100% 138.89% at 100% 51.9%, #E0EDED 0%, #FDFDFD 100%);
 //$border-dark: rgba($base-color, 0.88);
 
 // =Fonts=
@@ -24,7 +26,7 @@ $nav-width: 200px;
 $cardNav-width: 400px;
 
 // =Animations=
-$color-transition-time: 0.4s;
+$color-transition-time: 0.1s;
 
 
 // === CLASSES ===
@@ -60,8 +62,7 @@ body {
     margin: 0;
     color: $contrast;
     height: 100vh;
-    background: radial-gradient(
-        100% 138.89% at 100% 51.9%, #E0EDED 0%, #FDFDFD 100%);
+    background: $grad-background;
 }
 
 h1 {
@@ -182,7 +183,7 @@ a {
     }
 }
 
-#main {
+#storiesMenu {
     flex: 1 1 auto;
     height: 100%;
     display: flex;
@@ -286,7 +287,7 @@ a {
     flex: 0 1 auto;
 }
 
-#timeline {
+#timelineFrame {
     background-color: #5781EF;
     opacity: 0.2;
     flex: 1 1 auto;
@@ -301,15 +302,15 @@ a {
     box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
 
+    overflow-y: auto;
 }
 
 #cardAreaContents {
     display: flex;
-    height: 100%;
+    min-height: 100%;
     flex-direction: column;
     gap: 15px;
-    overflow-y: scroll;
-    // justify-content: space-evenly;
+    justify-content: space-evenly;
 }
 
 .card {
@@ -321,14 +322,23 @@ a {
     background: $neutral;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
+    -webkit-transition: color $color-transition-time;
+    -moz-transition:    color $color-transition-time;
+    -ms-transition:     color $color-transition-time;
+    -o-transition:      color $color-transition-time;
+    transition:         color $color-transition-time;
+    transition-timing-function: ease-out;
 
     display: flex;
     flex-direction: row;
 
     overflow-y: hidden;
+    
+    cursor: pointer;
 
     &:hover{
-        cursor: pointer;
+        box-shadow: 2px 2px 3px 3px rgba(0, 0, 0, 0.1);
+
         .cardTitle {
             color: $primary;
         }
@@ -357,29 +367,37 @@ a {
         justify-content: center;
         padding: 10px 0px;
         gap: 20px;
+    }
 
-        .cardTitle {
-            flex: none;
-            flex-grow: 0;
-            margin: 0;
-            color: $contrast;
-            -webkit-transition: color $color-transition-time;
-            -moz-transition:    color $color-transition-time;
-            -ms-transition:     color $color-transition-time;
-            -o-transition:      color $color-transition-time;
-            transition:         color $color-transition-time;
-            transition-timing-function: ease-out;
-        }
-        .cardDescript {
-            flex: none;
-            flex-grow: 0;
-            margin: 0;
-        }
+    .cardTitle {
+        flex: none;
+        flex-grow: 0;
+        margin: 0;
+        color: $contrast;
+        -webkit-transition: color $color-transition-time;
+        -moz-transition:    color $color-transition-time;
+        -ms-transition:     color $color-transition-time;
+        -o-transition:      color $color-transition-time;
+        transition:         color $color-transition-time;
+        transition-timing-function: ease-out;
+    }
+
+    .cardDescript {
+        flex: none;
+        flex-grow: 0;
+        margin: 0;
     }
 }
 
 #detail {
     flex: 1 1 auto;
+    z-index: 10;
+    min-height: 100%;
+    position: relative;
+    &.popout {
+        background: $neutral;
+        box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.1);
+    }
 }
 
 #storyCardHolder {
@@ -428,6 +446,21 @@ a {
     }
 }
 
+.solidIcon {
+    width: 50px;
+    height: 50px;
+    color: $primary;
+    cursor: pointer;
+
+    &.muted {
+        opacity: 0.7;
+    }
+    
+    &:hover {
+        opacity: 0.7;
+    }
+}
+
 .iconOutline {
     width: 50px;
     height: 50px;
@@ -451,9 +484,6 @@ a {
             justify-content:center;
         }
 
-        &:hover {
-            opacity: 0.5;
-        }
     }
 }
 

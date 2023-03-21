@@ -1,11 +1,12 @@
 import { Card } from "../../Card"
 import {IconButton} from "../../IconButton"
 import {Link} from "react-router-dom"
+import {faSquareXmark} from '@fortawesome/free-solid-svg-icons'
 
 export default function (props) {
     return <div id="storyContents">
-        <Link className="closeButton" to="/stories">
-            <IconButton iconName="close" clickHandler={()=>{setCurrentPage(0)}}/>
+        <Link className="closeButton" to="/">
+            <IconButton icon={faSquareXmark}/>
         </Link>
     
         <div id="storyCardHolder">

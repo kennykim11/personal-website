@@ -1,5 +1,5 @@
 
-import {Card} from './Card.jsx'
+import {Card} from './Card'
 import {StorageContext} from "./Storage"
 
 import React, {useContext} from 'react'

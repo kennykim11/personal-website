@@ -16,6 +16,8 @@ export class Storage {
     stories = {}
     storiesFullIdList = []
 
+    summaryMode = false
+
     displayedStories = []
     setDisplayedStories(storiesArray) {
         this.displayedStories = storiesArray
@@ -26,7 +28,7 @@ export class Storage {
         return this.displayedStories
     }
 
-    currentPage = ''
+    currentPage = 0
     setCurrentPage(page) {
         this.currentPage = page
         return this.currentPage

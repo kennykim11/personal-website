@@ -5,6 +5,7 @@ export default {
         "themes": ["explo"],
         "category": "project",
         "referTo": [],
+		"year": "2016",
         "thumbnail": new URL('./components/pages/placeholder/thumbnail.png', import.meta.url),
         "page": () => import ('./components/pages/placeholder/index.jsx')
     },
@@ -14,8 +15,12 @@ export default {
         "themes": ["explo", "prob"],
         "category": "project",
         "referTo": [],
+		"year": "2017",
         "thumbnail": new URL('./components/pages/placeholder/thumbnail.png', import.meta.url),
-        "page": () => import ('./components/pages/placeholder/index.jsx')
+        "page": async () => {
+            await new Promise(r => setTimeout(r, 5000))
+            return import ('./components/pages/placeholder/index.jsx')
+        }
     },
     "doorman": {
         "title": "Doorman",
@@ -23,6 +28,7 @@ export default {
         "themes": ["explo", "prob"],
         "category": "project",
         "referTo": [],
+		"year": "2018",
         "thumbnail": new URL('./components/pages/placeholder/thumbnail.png', import.meta.url),
         "page": () => import ('./components/pages/placeholder/index.jsx')
     },
@@ -32,6 +38,7 @@ export default {
         "themes": ["explo", "collab", "prob"],
         "category": "adventure",
         "referTo": [],
+		"year": "2018",
         "thumbnail": new URL('./components/pages/placeholder/thumbnail.png', import.meta.url),
         "page": () => import ('./components/pages/placeholder/index.jsx')
     },
@@ -41,6 +48,7 @@ export default {
         "themes": ["explo", "collab"],
         "category": "adventure",
         "referTo": [],
+		"year": "2018",
         "thumbnail": new URL('./components/pages/placeholder/thumbnail.png', import.meta.url),
         "page": () => import ('./components/pages/placeholder/index.jsx')
     },
@@ -50,6 +58,7 @@ export default {
         "themes": ["collab", "prob"],
         "category": "work",
         "referTo": [],
+		"year": "2019",
         "thumbnail": new URL('./components/pages/placeholder/thumbnail.png', import.meta.url),
         "page": () => import ('./components/pages/placeholder/index.jsx')
     },
@@ -59,6 +68,7 @@ export default {
         "themes": ["prob"],
         "category": "work",
         "referTo": [],
+		"year": "2019",
         "thumbnail": new URL('./components/pages/placeholder/thumbnail.png', import.meta.url),
         "page": () => import ('./components/pages/placeholder/index.jsx')
     },
@@ -68,6 +78,7 @@ export default {
         "themes": ["collab"],
         "category": "adventure",
         "referTo": [],
+		"year": "2019",
         "thumbnail": new URL('./components/pages/placeholder/thumbnail.png', import.meta.url),
         "page": () => import ('./components/pages/placeholder/index.jsx')
     },
@@ -77,6 +88,7 @@ export default {
         "themes": ["explo", "collab", "prob"],
         "category": "work",
         "referTo": [],
+		"year": "2022",
         "thumbnail": new URL('./components/pages/placeholder/thumbnail.png', import.meta.url),
         "page": () => import ('./components/pages/placeholder/index.jsx')
     },
@@ -86,6 +98,7 @@ export default {
         "themes": ["collab"],
         "category": "adventure",
         "referTo": [],
+		"year": "2020",
         "thumbnail": new URL('./components/pages/placeholder/thumbnail.png', import.meta.url),
         "page": () => import ('./components/pages/placeholder/index.jsx')
     },
@@ -95,6 +108,7 @@ export default {
         "themes": ["collab", "prob"],
         "category": "work",
         "referTo": [],
+		"year": "2021",
         "thumbnail": new URL('./components/pages/placeholder/thumbnail.png', import.meta.url),
         "page": () => import ('./components/pages/placeholder/index.jsx')
     },
@@ -104,6 +118,7 @@ export default {
         "themes": ["explo"],
         "category": "project",
         "referTo": [],
+		"year": "2021",
         "thumbnail": new URL('./components/pages/placeholder/thumbnail.png', import.meta.url),
         "page": () => import ('./components/pages/placeholder/index.jsx')
     },
@@ -113,6 +128,7 @@ export default {
         "themes": [],
         "category": "work",
         "referTo": [],
+		"year": "2021",
         "thumbnail": new URL('./components/pages/placeholder/thumbnail.png', import.meta.url),
         "page": () => import ('./components/pages/placeholder/index.jsx')
     },
@@ -122,6 +138,7 @@ export default {
         "themes": ["explo", "prob"],
         "category": "project",
         "referTo": [],
+		"year": "2021",
         "thumbnail": new URL('./components/pages/placeholder/thumbnail.png', import.meta.url),
         "page": () => import ('./components/pages/placeholder/index.jsx')
     },
@@ -131,6 +148,7 @@ export default {
         "themes": ["collab", "prob"],
         "category": "project",
         "referTo": [],
+		"year": "2022",
         "thumbnail": new URL('./components/pages/placeholder/thumbnail.png', import.meta.url),
         "page": () => import ('./components/pages/placeholder/index.jsx')
     },
@@ -140,6 +158,7 @@ export default {
         "themes": ["explo", "prob"],
         "category": "project",
         "referTo": [],
+		"year": "2022",
         "thumbnail": new URL('./components/pages/placeholder/thumbnail.png', import.meta.url),
         "page": () => import ('./components/pages/placeholder/index.jsx')
     },
@@ -149,6 +168,7 @@ export default {
         "themes": ["prob"],
         "category": "work",
         "referTo": [],
+		"year": "2022",
         "thumbnail": new URL('./components/pages/placeholder/thumbnail.png', import.meta.url),
         "page": () => import ('./components/pages/placeholder/index.jsx')
     },
@@ -158,6 +178,7 @@ export default {
         "themes": ["explo", "collab"],
         "category": "project",
         "referTo": [],
+		"year": "2022",
         "thumbnail": new URL('./components/pages/placeholder/thumbnail.png', import.meta.url),
         "page": () => import ('./components/pages/placeholder/index.jsx')
     },
@@ -167,6 +188,7 @@ export default {
         "themes": ["collab", "prob"],
         "category": "adventure",
         "referTo": [],
+		"year": "2022",
         "thumbnail": new URL('./components/pages/placeholder/thumbnail.png', import.meta.url),
         "page": () => import ('./components/pages/placeholder/index.jsx')
     },
@@ -176,6 +198,7 @@ export default {
         "themes": ["collab"],
         "category": "adventure",
         "referTo": [],
+		"year": "2022",
         "thumbnail": new URL('./components/pages/placeholder/thumbnail.png', import.meta.url),
         "page": () => import ('./components/pages/placeholder/index.jsx')
     },
@@ -185,6 +208,7 @@ export default {
         "themes": ["explo"],
         "category": "adventure",
         "referTo": [],
+		"year": "2022",
         "thumbnail": new URL('./components/pages/placeholder/thumbnail.png', import.meta.url),
         "page": () => import ('./components/pages/placeholder/index.jsx')
     },
@@ -194,6 +218,7 @@ export default {
         "themes": ["explo", "collab"],
         "category": "adventure",
         "referTo": [],
+		"year": "2022",
         "thumbnail": new URL('./components/pages/placeholder/thumbnail.png', import.meta.url),
         "page": () => import ('./components/pages/placeholder/index.jsx')
     },
@@ -203,6 +228,7 @@ export default {
         "themes": ["explo", "collab"],
         "category": "project",
         "referTo": [],
+		"year": "2022",
         "thumbnail": new URL('./components/pages/placeholder/thumbnail.png', import.meta.url),
         "page": () => import ('./components/pages/placeholder/index.jsx')
     },
@@ -212,6 +238,7 @@ export default {
         "themes": ["explo", "collab", "prob"],
         "category": "adventure",
         "referTo": [],
+		"year": "2023",
         "thumbnail": new URL('./components/pages/placeholder/thumbnail.png', import.meta.url),
         "page": () => import ('./components/pages/placeholder/index.jsx')
     },
@@ -221,6 +248,7 @@ export default {
         "themes": ["prob"],
         "category": "work",
         "referTo": [],
+		"year": "2023",
         "thumbnail": new URL('./components/pages/placeholder/thumbnail.png', import.meta.url),
         "page": () => import ('./components/pages/placeholder/index.jsx')
     },
@@ -230,6 +258,7 @@ export default {
         "themes": ["explo", "collab"],
         "category": "project",
         "referTo": [],
+		"year": "2023",
         "thumbnail": new URL('./components/pages/placeholder/thumbnail.png', import.meta.url),
         "page": () => import ('./components/pages/placeholder/index.jsx')
     },
@@ -239,6 +268,7 @@ export default {
         "themes": ["explo", "collab", "prob"],
         "category": "adventure",
         "referTo": [],
+		"year": "Now",
         "thumbnail": new URL('./components/pages/placeholder/thumbnail.png', import.meta.url),
         "page": () => import ('./components/pages/placeholder/index.jsx')
     }
