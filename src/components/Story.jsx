@@ -15,7 +15,7 @@ const Story = observer((props) => {
     // const enableSummary = searchParams.has('summary')
     const enableSummary = storage.summaryMode
 
-    return <Suspense fallback={<div id="loadingScreen">Loading...</div>}>
+    return <Suspense fallback={<div id="loadingScreen"><h1>Loading...</h1></div>}>
         <div style={{width: "100%"}}>
             <div id="detail" className={enableSummary?"popout":""}>
                 <PageComponent story={storage.stories[props.id]}/>

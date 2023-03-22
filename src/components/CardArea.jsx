@@ -10,16 +10,21 @@ const CardArea = observer(() => {
     const storage = useContext(StorageContext)
     const cardAreaRef = useRef(null)
 
-    function handleScroll(event) {
+    function handleScroll() {
         let el = cardAreaRef.current
         console.log(el.scrollTop, el.scrollHeight, el.clientHeight)
+        storage.setCardAreaScroll({
+            scrollTop: el.scrollTop,
+            scrollHeight: el.scrollHeight,
+            clientHeight: el.clientHeight
+        })
     }
     
     useEffect(() => {
         cardAreaRef.current.addEventListener('scroll', handleScroll)
         window.addEventListener('resize', handleScroll)
+        handleScroll()
         return () => {
-            cardAreaRef.current.removeEventListener('scroll', handleScroll)
             window.removeEventListener('resize', handleScroll)
         }
     }, [])

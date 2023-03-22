@@ -451,6 +451,11 @@ a {
     font-size: 18px;
 }
 
+#loadingScreen {
+    margin: auto;
+    text-align: center;
+}
+
 #summaryView {
     background-color: $neutral;
     opacity: 0.90;
@@ -533,7 +538,32 @@ a {
     right: 30px;
 }
 
+#testiArea {
+    width: 100%;
+}
 
+.testiCard {
+    background-color: $neutral;
+    border-radius: 20px;
+    width: 340px;
+    padding: 0 5px 0 5px;
+}
+
+.testiCardQuote {
+    font-weight: 600;
+    position: relative;
+    top: 5px;
+    left: 10px;
+}
+
+.testiCardAuthor {
+    color: $primary;
+    font-weight: 300;
+    text-align: right;
+    position: relative;
+    bottom: 5px;
+    right: 10px;
+}
 
 .Typist .Cursor {
     display: inline-block;

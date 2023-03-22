@@ -16,11 +16,11 @@ export function Nav() {
             </div>
         </Link>
         <div id="navLinkArea">
-            <NavLink to='/'><h2 className="navLink" id="navLink_stories">STORIES</h2></NavLink>
-            <Link to='/?summary'><h2 className="navLink" id="navLink_summary" onClick={()=>{storage.summaryMode=true}}>SUMMARY</h2></Link>
-            <h2 className="navLink" id="navLink_testim">TESTIMONIALS</h2>
+            <NavLink to='/'><h2 className="navLink">STORIES</h2></NavLink>
+            <Link to='/'><h2 className="navLink" onClick={()=>{storage.summaryMode=true}}>SUMMARY</h2></Link>
+            <Link to='/testimonials'><h2 className="navLink">TESTIMONIALS</h2></Link>
             <h2 className="navLink" id="navLink_tools">TOOLS</h2>
-            <NavLink to="/story/contact"><h2 className="navLink" id="navLink_contact">CONTACT</h2></NavLink>
+            <NavLink to="/story/contact"><h2 className="navLink">CONTACT</h2></NavLink>
         </div>
     </div>
 }

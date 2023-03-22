@@ -1,8 +1,9 @@
 
 import {StorageContext} from "./Storage"
 import * as styles from "./styles.scss"
+import {TimelineHighlight} from "./TimelineHighlight"
 
-import React, {useContext, useEffect, useRef} from 'react'
+import {useContext, useEffect, useRef, useState} from 'react'
 import {observer} from 'mobx-react-lite'
 
 const themeColors = {
@@ -30,13 +31,19 @@ function handleScroll(event) {
 }
 
 const Timeline = observer(() => {
-    const storage = useContext(StorageContext);
+    const storage = useContext(StorageContext)
+    const [timelineFrame, setTimelineFrame] = useState(null)
+    
     let lastYear = ""
     let newYear = false
 
-    const timelineAreaRef = useRef(null)
+    const timelineFrameRef = useRef(null)
 
-    return <div id="timelineFrame" ref={timelineAreaRef}>
+    useEffect(() => {
+        setTimelineFrame(timelineFrameRef.current)
+    }, [])
+
+    return <div id="timelineFrame" ref={timelineFrameRef}>
         <div id="timelineGrid"></div>
         <div id="timelineIcons">
             {storage.displayedStories.map((id) => {
@@ -48,7 +55,7 @@ const Timeline = observer(() => {
                 </span>
             })}
         </div>
-        <div id="timelineHighlight"/>
+        <TimelineHighlight parentEl={timelineFrame}/>
     </div>
 })
 export {Timeline}

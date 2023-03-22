@@ -19,20 +19,14 @@ export class Storage {
     summaryMode = false
 
     displayedStories = []
-    setDisplayedStories(storiesArray) {
-        this.displayedStories = storiesArray
-        return this.displayedStories
-    }
-    resetDisplayedStories() {
-        this.displayedStories = this.storiesFullIdList
-        return this.displayedStories
-    }
+    setDisplayedStories(storiesArray) {return this.displayedStories = storiesArray}
+    resetDisplayedStories() {return this.displayedStories = this.storiesFullIdList}
 
     currentPage = 0
-    setCurrentPage(page) {
-        this.currentPage = page
-        return this.currentPage
-    }
+    setCurrentPage(page) {return this.currentPage = page}
+
+    cardAreaScroll = {scrollTop: 0, scrollHeight: 0, clientHeight: 0}
+    setCardAreaScroll(scrollObject) {return this.scrollObject = scrollObject}
 
     constructor() {
         makeObservable(this, {
@@ -40,7 +34,9 @@ export class Storage {
             setDisplayedStories: action,
             resetDisplayedStories: action,
             currentPage: observable,
-            setCurrentPage: action
+            setCurrentPage: action,
+            cardAreaScroll: observable,
+            setCardAreaScroll: action
         })
         this.stories = cleanStories(stories)
         this.storiesFullIdList = Object.keys(this.stories)

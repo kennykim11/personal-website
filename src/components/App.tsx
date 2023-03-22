@@ -1,6 +1,6 @@
 import {Nav} from "./Nav"
 import {StoriesMenu} from "./StoriesMenu"
-import {Summary} from "./Summary"
+import {Testimonials} from "./Testimonials"
 
 import {Suspense, lazy} from "react"
 import {BrowserRouter, Routes, Route, redirect, Navigate, useSearchParams} from "react-router-dom"
@@ -29,6 +29,8 @@ export function App() {
                                 <Story id={id}/>
                             }/>
                         })}
+
+                        <Route path="/testimonials" element={<Testimonials/>}/>
 
                     </Routes>
             </div>
