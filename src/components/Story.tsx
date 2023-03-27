@@ -1,16 +1,20 @@
 import {Summary} from "./Summary"
 
-import {Suspense, lazy, useContext} from "react"
-import {Route, useSearchParams} from "react-router-dom"
+import {Suspense, lazy, useContext, useEffect} from "react"
 import {StorageContext} from "./Storage"
 
 import {observer} from 'mobx-react-lite'
 
-interface IStoryProps {
+interface IStory_props {
     id: string
+    title: string
 }
 
-const Story = observer((props: IStoryProps) => {
+const Story = observer((props: IStory_props) => {
+    useEffect(() => {
+        document.title = props.title
+    }, [])
+
     const storage = useContext(StorageContext)
 
     const PageComponent = lazy(storage.stories[props.id].page)

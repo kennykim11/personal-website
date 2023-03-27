@@ -92,8 +92,8 @@ const Summary = observer(() => {
                         hideWhenDone: false,
                         hideWhenDoneDelay: 200,
                     }} 
-                    onTypingDone={(event)=>{
-                        console.log(event)
+                    onTypingDone={()=>{
+                        document.getElementsByClassName("Cursor")[0].className = "Cursor--blinking"
                     }}>
                     {summaryInfo[storage.currentPage].text}</Typist>
             </h1>

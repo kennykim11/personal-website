@@ -12,7 +12,6 @@ const CardArea = observer(() => {
 
     function handleScroll() {
         let el = cardAreaRef.current
-        console.log(el.scrollTop, el.scrollHeight, el.clientHeight)
         storage.setCardAreaScroll({
             scrollTop: el.scrollTop,
             scrollHeight: el.scrollHeight,

@@ -263,7 +263,7 @@ export default {
         "page": () => import ('./components/pages/placeholder/index.jsx')
     },
     "contact": {
-        "title": "Let's Do It",
+        "title": "Let's Do This",
         "descript": "What are you waiting for? We can do something awesome...",
         "themes": ["explo", "collab", "prob"],
         "category": "adventure",

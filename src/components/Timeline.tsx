@@ -24,19 +24,14 @@ function generateIconCssColors(themes) {
     return str
 }
 
-function handleScroll(event) {
-    let el = event.srcElement
-    console.log(el.scrollTop, el.scrollHeight, el.clientHeight)
-}
-
 const Timeline = observer(() => {
     const storage = useContext(StorageContext)
-    const [timelineFrame, setTimelineFrame] = useState(null)
+    const [timelineFrameRef, setTimelineFrameRef] = useState(null)
     
     let lastYear = ""
     let newYear = false
 
-    return <div id="timelineFrame" ref={setTimelineFrame}>
+    return <div id="timelineFrame" ref={setTimelineFrameRef}>
         <div id="timelineGrid"></div>
         <div id="timelineIcons">
             {storage.displayedStories.map((id) => {
@@ -44,11 +39,13 @@ const Timeline = observer(() => {
                 if (newYear = currentStory.year !== lastYear) lastYear = currentStory.year
                 return <span key={id}>
                     {newYear && <h4>{lastYear}</h4>}
-                    <span className={`timelineIcon ${currentStory.category}`} style={{background: generateIconCssColors(currentStory.themes)}}/>
+                    <div className={`timelineIconHolder ${currentStory.category}`}>
+                        <div className="timelineIcon" style={{background: generateIconCssColors(currentStory.themes)}}/>
+                    </div>
                 </span>
             })}
         </div>
-        {timelineFrame && <TimelineHighlight parentEl={timelineFrame}/>}
+        {timelineFrameRef && <TimelineHighlight parentEl={timelineFrameRef}/>}
     </div>
 })
 export {Timeline}

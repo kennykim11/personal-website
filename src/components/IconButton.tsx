@@ -9,7 +9,6 @@ export function IconButton(props) {
 
     function keyDownHandler(event) {
         if (event.key === props.keyListener) {
-            console.log(event.key, props.icon)
             setMute(true)
         }
     }

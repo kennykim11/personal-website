@@ -4,9 +4,17 @@ import {Summary} from "./Summary"
 import {StorageContext} from "./Storage"
 
 import {useSearchParams} from "react-router-dom"
-import {useContext} from "react"
+import {useContext, useEffect} from "react"
 
-export function StoriesMenu() {
+interface IStoriesMenu_props {
+    title: string
+}
+
+export function StoriesMenu(props: IStoriesMenu_props) {
+    useEffect(() => {
+        document.title = props.title
+    }, [])
+
     const storage = useContext(StorageContext)
     const [searchParams] = useSearchParams()
     return <div style={{width: '100%'}}>
