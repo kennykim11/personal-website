@@ -1,5 +1,5 @@
-import {FilterArea} from './FilterArea.jsx'
-import { Timeline } from './Timeline.jsx'
+import {FilterArea} from './FilterArea'
+import { Timeline } from './Timeline'
 
 export function CardNav() {
     return <div id="cardNav">

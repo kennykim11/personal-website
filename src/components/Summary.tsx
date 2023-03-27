@@ -2,7 +2,7 @@
 import {StorageContext} from "./Storage"
 import {IconButton} from "./IconButton"
 
-import React, {useContext, useState, useEffect} from 'react'
+import {useContext, useState, useEffect} from 'react'
 import Typist from 'react-typist';
 import {observer} from "mobx-react-lite"
 import {Link, redirect, useNavigate} from "react-router-dom"

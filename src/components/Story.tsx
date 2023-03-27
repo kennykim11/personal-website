@@ -6,7 +6,11 @@ import {StorageContext} from "./Storage"
 
 import {observer} from 'mobx-react-lite'
 
-const Story = observer((props) => {
+interface IStoryProps {
+    id: string
+}
+
+const Story = observer((props: IStoryProps) => {
     const storage = useContext(StorageContext)
 
     const PageComponent = lazy(storage.stories[props.id].page)

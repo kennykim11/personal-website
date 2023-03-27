@@ -1,5 +1,5 @@
 import { action, makeObservable, observable } from "mobx";
-import React from "react";
+import {createContext, useContext} from "react";
 
 import stories from '../stories.js'
 
@@ -26,7 +26,7 @@ export class Storage {
     setCurrentPage(page) {return this.currentPage = page}
 
     cardAreaScroll = {scrollTop: 0, scrollHeight: 0, clientHeight: 0}
-    setCardAreaScroll(scrollObject) {return this.scrollObject = scrollObject}
+    setCardAreaScroll(scrollObject) {return this.cardAreaScroll = scrollObject}
 
     constructor() {
         makeObservable(this, {
@@ -45,14 +45,14 @@ export class Storage {
 }
 
 export const storage = new Storage()
-export const StorageContext = React.createContext(storage)
+export const StorageContext = createContext(storage)
 
 export const StorageProvider = ({children, storage}) => {
     return <StorageContext.Provider value={storage}>{children}</StorageContext.Provider>
 }
 
-export const useStorage = () => React.useContext(StorageContext);
+export const useStorage = () => useContext(StorageContext);
 
 export const withStorage = (Component) => (props) => {
     return <Component {...props} store={useStorage()} />;
-  };
+};

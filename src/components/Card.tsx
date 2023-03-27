@@ -11,10 +11,15 @@ export function Card(props) {
                     return <div className={"cardThemeBlock " + theme} key={theme}/>
                 })}
             </div>
-            <img className="thumbnail" src={imageSource} onError={(e: React.SyntheticEvent<HTMLImageElement, Event>)=>{e.currentTarget.onerror = null; e.currentTarget.src = HeadshotImage}}/>
+            <div className="thumbnailArea">
+                <img className="thumbnail" src={imageSource} 
+                    onError={(e: React.SyntheticEvent<HTMLImageElement, Event>)=>{
+                        e.currentTarget.onerror = null; e.currentTarget.src = HeadshotImage}
+                    }/>
+            </div>
             <div className="cardTextArea">
                 <h2 className="cardTitle">{props.story.title}</h2>
-                <h3 className="cardDescript">{props.story.descript}</h3>
+                <h4 className="cardDescript">{props.story.descript}</h4>
             </div>
         </div>
     </Link>

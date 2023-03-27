@@ -1,4 +1,3 @@
-- Testimonials
 - Tessalation background
 - About other Kenny Kims
 - Summary
@@ -6,7 +5,7 @@
     - First starting page
 - Main menu
     - Card tool tip about themes
-    - Matching scroll of story lists
     - Relations drawing algorithm
 - Story view
     - Close button absolute to frame, not window
+- FilterArea redo

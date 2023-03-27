@@ -15,7 +15,7 @@ export function Filter(props) {
         </div>
         <div className="filterText">
             {props.text.split("\\n").map((str, i) => {
-                return <h4 key={str}>{str}</h4>
+                return <h5 key={str}>{str}</h5>
             })}
         </div>
     </span>

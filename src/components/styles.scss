@@ -29,6 +29,15 @@ $cardNav-width: 400px;
 $color-transition-time: 0.1s;
 
 
+// === ROOT ===
+:root {
+    --accent1: #{$accent1};
+    --accent2: #{$accent2};
+    --accent3: #{$accent3};
+    --accent4: #{$accent4};
+}
+
+
 // === CLASSES ===
 .explo {
     background-color: $accent1;
@@ -86,12 +95,21 @@ h3 {
     font-family: $primary-type;
     font-style: normal;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 20px;
     line-height: 19px;
     /* identical to box height */
 }
 
 h4 {
+    font-family: $primary-type;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    /* identical to box height */
+}
+
+h5 {
     font-family: $primary-type;
     font-style: normal;
     font-weight: 400;
@@ -161,6 +179,10 @@ a {
     #navLinkArea {
         position: absolute;
         bottom: 0px;
+
+        h3 {
+            padding-top: 15px;
+        }
 
         .navLink{
             color: $contrast;
@@ -271,7 +293,7 @@ a {
             vertical-align: middle;
         }
 
-        h4 {
+        h5 {
             align-items: center;
             margin: 0 0;
             white-space: pre-line;
@@ -300,7 +322,7 @@ a {
     flex-direction: column;
     gap: 60px;
 
-    h3 {
+    h4 {
         display: inline;
         position: relative;
         top: -7px;
@@ -394,10 +416,16 @@ a {
         }
     }
 
-    .thumbnail {
-        width: 300px;
+    .thumbnailArea {
+        width: 240px;
         height: 180px;
         margin-right: 24px;
+        overflow: hidden;
+    }
+
+    .thumbnail {
+        margin: auto;
+        display: block;
     }
 
     .cardTextArea {

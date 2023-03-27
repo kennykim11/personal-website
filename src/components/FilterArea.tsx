@@ -1,12 +1,12 @@
-import {Filter} from './Filter.jsx'
-import {StorageContext} from "./Storage"
+import {Filter} from './Filter'
+import {StorageContext, Storage} from "./Storage"
 
-import React, { useContext } from 'react'
+import { useContext } from 'react'
 import {observer} from 'mobx-react-lite'
 
 let searchTerm = ''
 let allStories = {}
-let storage = {}
+let storage: Storage
 let selectedThemes = {'explo': true, 'collab': true, 'prob': true}
 let selectedCategories = {'work': true, 'adventure': true, 'project': true}
 

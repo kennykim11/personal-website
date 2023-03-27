@@ -1,15 +1,14 @@
 
 import {StorageContext} from "./Storage"
-import * as styles from "./styles.scss"
 import {TimelineHighlight} from "./TimelineHighlight"
 
 import {useContext, useEffect, useRef, useState} from 'react'
 import {observer} from 'mobx-react-lite'
 
 const themeColors = {
-    explo: "#B76AEF",
-    collab: "#F3BA38",
-    prob: "#5781EF"
+    explo: "var(--accent1)",
+    collab: "var(--accent3)",
+    prob: "var(--accent4)"
 }
 
 function generateIconCssColors(themes) {
@@ -37,25 +36,19 @@ const Timeline = observer(() => {
     let lastYear = ""
     let newYear = false
 
-    const timelineFrameRef = useRef(null)
-
-    useEffect(() => {
-        setTimelineFrame(timelineFrameRef.current)
-    }, [])
-
-    return <div id="timelineFrame" ref={timelineFrameRef}>
+    return <div id="timelineFrame" ref={setTimelineFrame}>
         <div id="timelineGrid"></div>
         <div id="timelineIcons">
             {storage.displayedStories.map((id) => {
                 const currentStory = storage.stories[id]
                 if (newYear = currentStory.year !== lastYear) lastYear = currentStory.year
                 return <span key={id}>
-                    {newYear && <h3>{lastYear}</h3>}
+                    {newYear && <h4>{lastYear}</h4>}
                     <span className={`timelineIcon ${currentStory.category}`} style={{background: generateIconCssColors(currentStory.themes)}}/>
                 </span>
             })}
         </div>
-        <TimelineHighlight parentEl={timelineFrame}/>
+        {timelineFrame && <TimelineHighlight parentEl={timelineFrame}/>}
     </div>
 })
 export {Timeline}
