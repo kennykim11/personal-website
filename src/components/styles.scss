@@ -41,12 +41,15 @@ $color-transition-time: 0.1s;
 // === CLASSES ===
 .explo {
     background-color: $accent1;
+    color: $accent1;
 }
 .collab {
     background-color: $accent3;
+    color: $accent3;
 }
 .prob {
     background-color: $accent4;
+    color: $accent4;
 }
 .work {
     width: 22px;
@@ -579,6 +582,15 @@ a {
     right: 30px;
 }
 
+#slogan {
+    margin: auto;
+    text-align: center;
+    
+    h1 {
+        font-style: italic;
+    }
+}
+
 #testiArea {
     width: 100%;
 }
@@ -604,6 +616,87 @@ a {
     position: relative;
     bottom: 5px;
     right: 10px;
+}
+
+#landingPage {
+    z-index: 20;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: $neutral;
+    top: 0px;
+    left: 0px;
+}
+
+#landingArea {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    height: 700px;
+}
+
+#introImage {
+    flex: 1, 1, 650px;
+}
+
+#landingInterface {
+    position: relative;
+    width: 500px;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+}
+
+#landingText {
+    padding-top: 150px;
+    text-align: center;
+    h1 {
+        display: inline;
+        text-align: center;
+        font-size: 58;
+        font-weight: 600;
+    }
+
+    #themeList {
+        margin-top: 40px;
+    }
+
+    span {
+        background: none;
+        font-size: 21;
+    }
+}
+
+#landingOptions {
+    padding-top: 60px;
+    padding-left: 60px;
+
+    #landingIntroOption{
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 10px;
+
+        svg {
+            position: relative;
+            top: 50%;
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+        }
+    }
+    
+    h3 {
+        font-size: 40;
+        color: $primary;
+    }
+
+    #landingMainOption {
+        font-weight: 500;
+    }
 }
 
 .Typist .Cursor {

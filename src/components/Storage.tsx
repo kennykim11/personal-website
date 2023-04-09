@@ -28,6 +28,9 @@ export class Storage {
     cardAreaScroll = {scrollTop: 0, scrollHeight: 0, clientHeight: 0}
     setCardAreaScroll(scrollObject) {return this.cardAreaScroll = scrollObject}
 
+    highlightedCard = ""
+    setHighlightedCard(cardId: string) {return this.highlightedCard = cardId}
+
     constructor() {
         makeObservable(this, {
             displayedStories: observable,
@@ -36,7 +39,9 @@ export class Storage {
             currentPage: observable,
             setCurrentPage: action,
             cardAreaScroll: observable,
-            setCardAreaScroll: action
+            setCardAreaScroll: action,
+            highlightedCard: observable,
+            setHighlightedCard: action
         })
         this.stories = cleanStories(stories)
         this.storiesFullIdList = Object.keys(this.stories)
@@ -54,5 +59,5 @@ export const StorageProvider = ({children, storage}) => {
 export const useStorage = () => useContext(StorageContext);
 
 export const withStorage = (Component) => (props) => {
-    return <Component {...props} store={useStorage()} />;
-};
+    return <Component {...props} store={useStorage()} />
+}

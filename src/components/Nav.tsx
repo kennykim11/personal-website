@@ -1,7 +1,7 @@
 import {NavLink, Link} from "react-router-dom"
+import {useContext} from "react"
 
 import {StorageContext} from "./Storage"
-import {useContext} from "react"
 import HeadshotImage from '../assets/Suit_Edited_cropped_scaled.png'
 
 export function Nav() {

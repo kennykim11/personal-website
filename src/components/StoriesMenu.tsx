@@ -4,13 +4,16 @@ import {Summary} from "./Summary"
 import {StorageContext} from "./Storage"
 
 import {useSearchParams} from "react-router-dom"
-import {useContext, useEffect} from "react"
+import {useContext, useEffect, useState} from "react"
+import { LandingPage } from "./LandingPage"
 
 interface IStoriesMenu_props {
     title: string
 }
 
 export function StoriesMenu(props: IStoriesMenu_props) {
+    const [showLandingPage, setLandingPage] = useState(true)
+
     useEffect(() => {
         document.title = props.title
     }, [])
@@ -18,6 +21,8 @@ export function StoriesMenu(props: IStoriesMenu_props) {
     const storage = useContext(StorageContext)
     const [searchParams] = useSearchParams()
     return <div style={{width: '100%'}}>
+        {console.log(showLandingPage)}
+        {showLandingPage && <LandingPage setLandingPageHandler={setLandingPage}/>}
         <div id="storiesMenu">
             <CardNav/>
             <CardArea/>
