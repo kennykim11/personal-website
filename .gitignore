@@ -3,5 +3,6 @@ node_modules
 dist
 .parcel-cache
 src/test
-src/components/pages
+src/components/pages/*
 src/components/pages/makerClass/timelapse.mp4
+!src/components/pages/microsoft
