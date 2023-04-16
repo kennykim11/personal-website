@@ -6,16 +6,14 @@ import {StorageContext} from "./Storage"
 import {faCaretRight} from '@fortawesome/free-solid-svg-icons'
 import {useContext} from "react"
 
-interface ILandingPage_props {
-    setLandingPageHandler: (show: boolean)=>void
-}
-
-export function LandingPage(props: ILandingPage_props) {
+export function LandingPage() {
     const storage = useContext(StorageContext)
 
     return <div id="landingPage">
         <div id="landingArea">
-            <img src={IntroImage} id="introImage"/>
+            <div id="introImageArea">
+                <img src={IntroImage} id="introImage"/>
+            </div>
             <div id="landingInterface">
                 <div id="landingText">
                     <h1>Hi, I'm Kenny Kim!</h1>
@@ -29,16 +27,17 @@ export function LandingPage(props: ILandingPage_props) {
                 </div>
                 <div id="landingOptions">
                     <Link to='/'>
-                        <div id="landingIntroOption">
-                            <h3 onClick={()=>{
-                                storage.summaryMode=true
-                                props.setLandingPageHandler(false)
-                                }}>Introduction</h3>
-                            <IconButton onClick={()=>{props.setLandingPageHandler(false)}} icon={faCaretRight} keyListener="Space"/>
+                        <div id="landingIntroOption" onClick={()=>{
+                            storage.summaryMode=true
+                            window.sessionStorage.setItem("firstTime", "false");
+                            }}>
+                            <h3>Introduction</h3>
+                            <IconButton icon={faCaretRight} keyListener="Space"/>
                         </div>
                     </Link>
                     <Link to="/">
-                        <div id="landingMainOption">Skip to Main Page</div>
+                        <div id="landingMainOption" onClick={()=>{window.sessionStorage.setItem("firstTime", "false");}}>
+                            Skip to Main Page</div>
                     </Link>
                 </div>
             </div>

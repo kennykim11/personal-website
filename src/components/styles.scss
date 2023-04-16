@@ -38,7 +38,7 @@ $color-transition-time: 0.1s;
 }
 
 
-// === CLASSES ===
+// === GLOBAL CLASSES ===
 .explo {
     background-color: $accent1;
     color: $accent1;
@@ -60,6 +60,7 @@ $color-transition-time: 0.1s;
         width: 141%;
         height: 141%;
         transform: rotate(-45deg) translate(0, -20%);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
 }
 .adventure {
@@ -144,6 +145,18 @@ a {
     }
 }
 
+/* Track */
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: $primary;
+    border-radius: 2px;
+    opacity: 0.2;
+}
+
 
 // === IDS ===
 
@@ -155,11 +168,13 @@ a {
     display: flex;
     flex-direction: row;
     gap: 5px;
+    position: relative;
 }
 
 #nav {
     flex: 0 1 $nav-width;
     height: $frame-height;
+    margin-left: 10px;
 
     #headshotArea {
         $headshot-size: 160px;
@@ -332,6 +347,7 @@ a {
     display: flex;
     flex-direction: column;
     gap: 60px;
+    
 
     h4 {
         display: inline;
@@ -353,6 +369,9 @@ a {
 .timelineIconHolder {
     position: sticky;
     display: inline-block;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+
 }
 
 .timelineIcon {
@@ -372,7 +391,7 @@ a {
 
 #cardArea {
     flex: 1 1 auto;
-    padding: 10px 20px 15px 15px;
+    padding: 10px 10px 15px 15px;
     height: calc($frame-height - 25px);
 
     background: $muted;
@@ -489,15 +508,59 @@ a {
 }
 
 #storyContents {
-    max-width: 900px;
+    max-width: 700px;
     margin: auto;
     font-family: $paragraph-type;
     font-size: 18px;
+    padding-right: 40px;;
+
+    h1 {
+        font-size: 48;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 36;
+        font-weight: 500;
+    }
+
+    h3 {
+        font-size: 24;
+        font-weight: 700;
+        color: $primary;
+        padding-top: 20px;
+    }
+
+    h4 {
+        font-size: 18;
+        font-weight: 400;
+    }
+
+    p {
+        font-size: 18;
+        font-family: $primary-type;
+        text-align: justify;
+        text-justify: inter-word;
+        padding-bottom: 0px;
+        line-height: 120%;
+    }
+
+    #introduction {
+        p {
+            font-style: italic;
+            font-weight: 500;
+        }
+    }
 }
 
 #loadingScreen {
     margin: auto;
     text-align: center;
+
+    h1 div{
+        float: right;
+    }
 }
 
 #summaryView {
@@ -578,8 +641,13 @@ a {
 .closeButton{
     position: absolute;
     box-sizing: border-box;
-    top: 30px;
-    right: 30px;
+    top: 20px;
+    right: 20px;
+
+    .solidIcon {
+        width: 35px;
+        height: 35px;
+    }
 }
 
 #slogan {
@@ -623,41 +691,53 @@ a {
     position: fixed;
     width: 100vw;
     height: 100vh;
+    padding-right: 200px;
+    padding-bottom: 200px;
     background-color: $neutral;
     top: 0px;
     left: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #landingArea {
     position: absolute;
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    // left: 50%;
+    // top: 50%;
+    // -webkit-transform: translate(-50%, -50%);
+    // transform: translate(-50%, -50%);
     display: flex;
     flex-direction: row;
     gap: 30px;
     height: 700px;
 }
 
+#introImageArea {
+    flex: 0 1 650px;
+    min-width: 200px;
+    display: flex;
+    justify-content: center;
+}
+
 #introImage {
-    flex: 1, 1, 650px;
+    width: 100%;
+    object-fit: contain;
 }
 
 #landingInterface {
     position: relative;
-    width: 500px;
     top: 50%;
     -webkit-transform: translate(0, -50%);
     transform: translate(0, -50%);
+    flex: 0 0 500px;
 }
 
 #landingText {
     padding-top: 150px;
-    text-align: center;
+
     h1 {
         display: inline;
-        text-align: center;
         font-size: 58;
         font-weight: 600;
     }
@@ -680,6 +760,7 @@ a {
         display: flex;
         flex-direction: row;
         margin-bottom: 10px;
+        width: fit-content;
 
         svg {
             position: relative;
@@ -696,6 +777,16 @@ a {
 
     #landingMainOption {
         font-weight: 500;
+        width: fit-content;
+    }
+
+    a {
+        display: block;
+        width: fit-content;
+        
+        &:hover {
+            opacity: 0.5;
+        }
     }
 }
 

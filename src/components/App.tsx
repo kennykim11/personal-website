@@ -2,7 +2,6 @@ import {Nav} from "./Nav"
 import {StoriesMenu} from "./StoriesMenu"
 import {Testimonials} from "./Testimonials"
 import {Story} from "./Story"
-import {LandingPage} from "./LandingPage"
 import {storage, StorageContext} from "./Storage"
 
 import {BrowserRouter, Routes, Route} from "react-router-dom"

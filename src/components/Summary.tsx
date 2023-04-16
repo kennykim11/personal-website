@@ -11,7 +11,7 @@ import {faSquareCaretLeft, faSquareCaretRight, faSquareXmark} from '@fortawesome
 
 const summaryInfo = [
     {
-        text: "For the last seven years, I've been learning that the best approach to life is to constantly ask, \"What if?\"",
+        text: "In the past seven years, I've constantly been asking, \"What if?\"",
         stories: ["seventhDay", "sois", "friendzone"]
     },
     {

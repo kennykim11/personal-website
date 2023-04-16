@@ -12,7 +12,6 @@ interface IStoriesMenu_props {
 }
 
 export function StoriesMenu(props: IStoriesMenu_props) {
-    const [showLandingPage, setLandingPage] = useState(true)
 
     useEffect(() => {
         document.title = props.title
@@ -21,8 +20,7 @@ export function StoriesMenu(props: IStoriesMenu_props) {
     const storage = useContext(StorageContext)
     const [searchParams] = useSearchParams()
     return <div style={{width: '100%'}}>
-        {console.log(showLandingPage)}
-        {showLandingPage && <LandingPage setLandingPageHandler={setLandingPage}/>}
+        {window.sessionStorage.getItem("firstTime")==null && <LandingPage/>}
         <div id="storiesMenu">
             <CardNav/>
             <CardArea/>

@@ -7,7 +7,7 @@ export default {
         "referTo": [],
 		"year": "2016",
         "thumbnail": new URL('./components/pages/placeholder/thumbnail.png', import.meta.url),
-        "page": () => import ('./components/pages/placeholder/index.jsx')
+        "page": () => import('./components/pages/microsoft/microsoft.tsx')
     },
     "sandbox": {
         "title": "Sandbox",
@@ -19,7 +19,7 @@ export default {
         "thumbnail": new URL('./components/pages/placeholder/thumbnail.png', import.meta.url),
         "page": async () => {
             await new Promise(r => setTimeout(r, 50000))
-            return import ('./components/pages/placeholder/index.jsx')
+            return import('./components/pages/placeholder/index.jsx')
         }
     },
     "doorman": {
@@ -30,7 +30,7 @@ export default {
         "referTo": [],
 		"year": "2018",
         "thumbnail": new URL('./components/pages/placeholder/thumbnail.png', import.meta.url),
-        "page": () => import ('./components/pages/placeholder/index.jsx')
+        "page": () => import('./components/pages/placeholder/index.jsx')
     },
     "sois": {
         "title": "Individualized Study",
@@ -40,7 +40,7 @@ export default {
         "referTo": [],
 		"year": "2018",
         "thumbnail": new URL('./components/pages/placeholder/thumbnail.png', import.meta.url),
-        "page": () => import ('./components/pages/placeholder/index.jsx')
+        "page": () => import('./components/pages/placeholder/index.jsx')
     },
     "hitchhiking": {
         "title": "Hitchhacker",
@@ -50,7 +50,7 @@ export default {
         "referTo": [],
 		"year": "2018",
         "thumbnail": new URL('./components/pages/placeholder/thumbnail.png', import.meta.url),
-        "page": () => import ('./components/pages/placeholder/index.jsx')
+        "page": () => import('./components/pages/placeholder/index.jsx')
     },
     "friendzone": {
         "title": "Friendzone",
@@ -60,7 +60,7 @@ export default {
         "referTo": [],
 		"year": "2019",
         "thumbnail": new URL('./components/pages/placeholder/thumbnail.png', import.meta.url),
-        "page": () => import ('./components/pages/placeholder/index.jsx')
+        "page": () => import('./components/pages/placeholder/index.jsx')
     },
     "moog": {
         "title": "Moog",
@@ -70,7 +70,7 @@ export default {
         "referTo": [],
 		"year": "2019",
         "thumbnail": new URL('./components/pages/placeholder/thumbnail.png', import.meta.url),
-        "page": () => import ('./components/pages/placeholder/index.jsx')
+        "page": () => import('./components/pages/placeholder/index.jsx')
     },
     "sg": {
         "title": "It's not your fault",
@@ -80,7 +80,7 @@ export default {
         "referTo": [],
 		"year": "2019",
         "thumbnail": new URL('./components/pages/placeholder/thumbnail.png', import.meta.url),
-        "page": () => import ('./components/pages/placeholder/index.jsx')
+        "page": () => import('./components/pages/placeholder/index.jsx')
     },
     "htl": {
         "title": "HTL",
@@ -90,7 +90,7 @@ export default {
         "referTo": [],
 		"year": "2020",
         "thumbnail": new URL('./components/pages/placeholder/thumbnail.png', import.meta.url),
-        "page": () => import ('./components/pages/placeholder/index.jsx')
+        "page": () => import('./components/pages/placeholder/index.jsx')
     },
     "csh": {
         "title": "Computer Science House",
@@ -100,7 +100,7 @@ export default {
         "referTo": [],
 		"year": "2020",
         "thumbnail": new URL('./components/pages/placeholder/thumbnail.png', import.meta.url),
-        "page": () => import ('./components/pages/placeholder/index.jsx')
+        "page": () => import('./components/pages/placeholder/index.jsx')
     },
     "nasa": {
         "title": "NASA",
@@ -110,7 +110,7 @@ export default {
         "referTo": [],
 		"year": "2021",
         "thumbnail": new URL('./components/pages/placeholder/thumbnail.png', import.meta.url),
-        "page": () => import ('./components/pages/placeholder/index.jsx')
+        "page": () => import('./components/pages/placeholder/index.jsx')
     },
     "surnameStudies": {
         "title": "Surname Studies",
@@ -120,7 +120,7 @@ export default {
         "referTo": [],
 		"year": "2021",
         "thumbnail": new URL('./components/pages/placeholder/thumbnail.png', import.meta.url),
-        "page": () => import ('./components/pages/placeholder/index.jsx')
+        "page": () => import('./components/pages/placeholder/index.jsx')
     },
     "microsoft": {
         "title": "Applied Science",
@@ -130,7 +130,7 @@ export default {
         "referTo": [],
 		"year": "2021",
         "thumbnail": new URL('./components/pages/placeholder/thumbnail.png', import.meta.url),
-        "page": () => import ('./components/pages/placeholder/index.jsx')
+        "page": () => import('./components/pages/placeholder/index.jsx')
     },
     "businessCard": {
         "title": "PCB Business Card",
@@ -140,7 +140,7 @@ export default {
         "referTo": [],
 		"year": "2021",
         "thumbnail": new URL('./components/pages/placeholder/thumbnail.png', import.meta.url),
-        "page": () => import ('./components/pages/placeholder/index.jsx')
+        "page": () => import('./components/pages/placeholder/index.jsx')
     },
     "launch": {
         "title": "Launch Initiative",
@@ -150,7 +150,7 @@ export default {
         "referTo": [],
 		"year": "2022",
         "thumbnail": new URL('./components/pages/placeholder/thumbnail.png', import.meta.url),
-        "page": () => import ('./components/pages/placeholder/index.jsx')
+        "page": () => import('./components/pages/placeholder/index.jsx')
     },
     "heatTransfer": {
         "title": "Curiosity (almost) arrested the cat",
@@ -160,7 +160,7 @@ export default {
         "referTo": [],
 		"year": "2022",
         "thumbnail": new URL('./components/pages/placeholder/thumbnail.png', import.meta.url),
-        "page": () => import ('./components/pages/placeholder/index.jsx')
+        "page": () => import('./components/pages/placeholder/index.jsx')
     },
     "ti": {
         "title": "Bureaucracy is an illusion",
@@ -170,7 +170,7 @@ export default {
         "referTo": [],
 		"year": "2022",
         "thumbnail": new URL('./components/pages/placeholder/thumbnail.png', import.meta.url),
-        "page": () => import ('./components/pages/placeholder/index.jsx')
+        "page": () => import('./components/pages/placeholder/index.jsx')
     },
     "makerClass": {
         "title": "Breaking boundaries",
@@ -180,7 +180,7 @@ export default {
         "referTo": [],
 		"year": "2022",
         "thumbnail": new URL('./components/pages/placeholder/thumbnail.png', import.meta.url),
-        "page": () => import ('./components/pages/placeholder/index.jsx')
+        "page": () => import('./components/pages/placeholder/index.jsx')
     },
     "orientation": {
         "title": "Rule-based autism",
@@ -190,7 +190,7 @@ export default {
         "referTo": [],
 		"year": "2022",
         "thumbnail": new URL('./components/pages/placeholder/thumbnail.png', import.meta.url),
-        "page": () => import ('./components/pages/placeholder/index.jsx')
+        "page": () => import('./components/pages/placeholder/index.jsx')
     },
     "nepaliKitchen": {
         "title": "Nepali Kitchen",
@@ -200,7 +200,7 @@ export default {
         "referTo": [],
 		"year": "2022",
         "thumbnail": new URL('./components/pages/placeholder/thumbnail.png', import.meta.url),
-        "page": () => import ('./components/pages/placeholder/index.jsx')
+        "page": () => import('./components/pages/placeholder/index.jsx')
     },
     "industrialDesign": {
         "title": "Industrial Design",
@@ -210,7 +210,7 @@ export default {
         "referTo": [],
 		"year": "2022",
         "thumbnail": new URL('./components/pages/placeholder/thumbnail.png', import.meta.url),
-        "page": () => import ('./components/pages/placeholder/index.jsx')
+        "page": () => import('./components/pages/placeholder/index.jsx')
     },
     "mit": {
         "title": "Kenny Kim, MIT Student",
@@ -220,7 +220,7 @@ export default {
         "referTo": [],
 		"year": "2022",
         "thumbnail": new URL('./components/pages/placeholder/thumbnail.png', import.meta.url),
-        "page": () => import ('./components/pages/placeholder/index.jsx')
+        "page": () => import('./components/pages/placeholder/index.jsx')
     },
     "gradParty": {
         "title": "Graduation Party",
@@ -230,7 +230,7 @@ export default {
         "referTo": [],
 		"year": "2022",
         "thumbnail": new URL('./components/pages/placeholder/thumbnail.png', import.meta.url),
-        "page": () => import ('./components/pages/placeholder/index.jsx')
+        "page": () => import('./components/pages/placeholder/index.jsx')
     },
     "turkiye": {
         "title": "Bugün Güzel",
@@ -240,7 +240,7 @@ export default {
         "referTo": [],
 		"year": "2023",
         "thumbnail": new URL('./components/pages/placeholder/thumbnail.png', import.meta.url),
-        "page": () => import ('./components/pages/placeholder/index.jsx')
+        "page": () => import('./components/pages/placeholder/index.jsx')
     },
     "spacex": {
         "title": "SpaceX",
@@ -250,7 +250,7 @@ export default {
         "referTo": [],
 		"year": "2023",
         "thumbnail": new URL('./components/pages/placeholder/thumbnail.png', import.meta.url),
-        "page": () => import ('./components/pages/placeholder/index.jsx')
+        "page": () => import('./components/pages/placeholder/index.jsx')
     },
     "personalWebsite": {
         "title": "Personal Website",
@@ -260,7 +260,7 @@ export default {
         "referTo": [],
 		"year": "2023",
         "thumbnail": new URL('./components/pages/placeholder/thumbnail.png', import.meta.url),
-        "page": () => import ('./components/pages/placeholder/index.jsx')
+        "page": () => import('./components/pages/placeholder/index.jsx')
     },
     "contact": {
         "title": "Let's Do This",
@@ -270,6 +270,6 @@ export default {
         "referTo": [],
 		"year": "Now",
         "thumbnail": new URL('./components/pages/placeholder/thumbnail.png', import.meta.url),
-        "page": () => import ('./components/pages/placeholder/index.jsx')
+        "page": () => import('./components/pages/placeholder/index.jsx')
     }
 }
