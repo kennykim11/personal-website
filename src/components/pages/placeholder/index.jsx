@@ -4,11 +4,7 @@ import {Link} from "react-router-dom"
 import {faSquareXmark} from '@fortawesome/free-solid-svg-icons'
 
 export default function (props) {
-    return <div id="storyContents">
-        <Link className="closeButton" to="/">
-            <IconButton icon={faSquareXmark}/>
-        </Link>
-    
+    return <div id="storyContents">    
         <div id="storyCardHolder">
             <Card story={props.story}/>
         </div>
