@@ -10,3 +10,8 @@
     - Close button absolute to frame, not window
 - FilterArea redo
 - Make loading elipses repeat
+
+
+Before Sympoisum:
+    Contact page
+    

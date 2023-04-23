@@ -55,16 +55,19 @@ const FilterArea = observer(() => {
         </div>
         <div className="filterGap"/>
         <span className="filterSpan">
+            <div className='filterLabel'>Theme</div>
             <Filter filterId="explo" text="Exploration" clickHandler={toggleTheme}/>
             <Filter filterId="collab" text="Collaboration" clickHandler={toggleTheme}/>
-            <Filter filterId="prob" text="Problem\nSolving" clickHandler={toggleTheme}/>
+            <Filter filterId="prob" text="Prob. Solving" clickHandler={toggleTheme}/>
         </span>
         <div className="filterGap"/>
         <span className="filterSpan">
-            <Filter filterId="work" text="Work\nExperience" shape="triangle" clickHandler={toggleCategory}/>
+            <div className='filterLabel'>Type</div>
+            <Filter filterId="work" text="Work" shape="triangle" clickHandler={toggleCategory}/>
             <Filter filterId="adventure" text="Adventure" shape="square" clickHandler={toggleCategory}/>
             <Filter filterId="project" text="Project" shape="circle" clickHandler={toggleCategory}/>
         </span>
+        <div className="filterGap"/>
     </div>
 })
 

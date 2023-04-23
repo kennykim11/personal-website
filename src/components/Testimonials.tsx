@@ -5,10 +5,10 @@ import testimonies from "../testimonials.json"
 
 const slogans = [
     <h1>"4 out of 5 dentists recommend <b>Kenny Kim</b>!"</h1>,
-    <h1>"<b>Kenny Kim</b> is the preferred choice by leading engineering corporations!"</h1>,
-    <h1>"I can't believe it's not <b>Kenny Kim</b>!"</h1>,
-    <h1>"Join the countless customers who have seen results in just 12 weeks of using <b>Kenny Kim</b>!"</h1>,
-    <h1>"<b>Kenny Kim</b>: As seen on TV!"</h1>
+    // <h1>"<b>Kenny Kim</b> is the preferred choice by leading engineering corporations!"</h1>,
+    // <h1>"I can't believe it's not <b>Kenny Kim</b>!"</h1>,
+    // <h1>"Join the countless customers who have seen results in just 12 weeks of using <b>Kenny Kim</b>!"</h1>,
+    // <h1>"<b>Kenny Kim</b>: As seen on TV!"</h1>
 ]
 
 const columnWidth = 350
