@@ -6,3 +6,5 @@ src/test
 src/components/pages/*
 src/components/pages/makerClass/timelapse.mp4
 !src/components/pages/microsoft
+!src/components/pages/contact
+.env.local

@@ -1,0 +1,68 @@
+@import "../../styles.scss";
+
+#contactPage {
+    justify-content: center;
+    padding-top: 40px;
+}
+
+h1 {
+    font-style: italic;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    div {
+        flex: auto;
+        width: 700px;
+        padding: 20px;
+    }
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid $primary;
+    outline: none;
+    border-radius: 10px;
+    font-size: 16;
+    font-family: $primary-type, sans-serif;
+
+}
+
+textarea {
+    width: 722px;
+    height: 200px;
+    padding: 10px;
+    resize: none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+    
+    
+    border: 1px solid $primary;
+    outline: none;
+    border-radius: 10px;
+    font-size: 16;
+    font-family: $primary-type, sans-serif;
+}
+
+button {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 24;
+
+    border: none;
+    outline: none;
+    background-color: $primary;
+    color: $neutral;
+}

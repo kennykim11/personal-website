@@ -10,7 +10,6 @@ import 'ionicons';
 import './styles.scss'
 
 export function App() {
-
     return <StorageContext.Provider value={storage}>
         <BrowserRouter>
             <div id="frame">

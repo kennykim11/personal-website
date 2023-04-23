@@ -270,6 +270,6 @@ export default {
         "referTo": [],
 		"year": "Now",
         "thumbnail": new URL('./components/pages/placeholder/thumbnail.png', import.meta.url),
-        "page": () => import('./components/pages/placeholder/index.jsx')
+        "page": () => import('./components/pages/contact/contact.jsx')
     }
 }
