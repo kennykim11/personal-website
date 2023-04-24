@@ -1,13 +1,19 @@
-import { Card } from "../../Card"
-import {IconButton} from "../../IconButton"
-import {Link} from "react-router-dom"
-import {faSquareXmark} from '@fortawesome/free-solid-svg-icons'
+import {WorkStats} from "../../WorkStats"
 
-export default function (props) {
+import '../story_styles.scss'
+
+export default function () {
     return <div id="storyContents">
         <h1>Microsoft (Software Engineer)</h1>
 
-        <div id="introduction">
+        <WorkStats 
+            company="Microsoft"
+            location="Redmond, Washington (Remote)"
+            position="Software Engineering Intern"
+            team="Backend Engineering, Power Virtual Agents"
+            dates="May 2021 - August 2021"/>
+
+        <div className="introduction">
             <p>Internships have always provided opportunities for me to dive into new challenges and adventures, solve exciting problems with great people, and demonstrate the advantages of my multidisciplinary background to employers. NASA LaRC was my favorite internship, but in many ways my hardest. I channeled my passion for learning both on the job and outside of work while working under the weirdest of circumstances at the height of the pandemic.</p>
         </div>
 
@@ -31,8 +37,6 @@ export default function (props) {
 
         <p>However, the biggest lesson I learned was to give myself rest if I wanted to be efficient. It seems counterintuitive, but I was burned out before even starting the job. For reference, the last time I had a break was a year before, and since then, I did my internship at HTL, had an extremely rough experience as a virtual orientation leader, went through a difficult semester in school and as CSH’s R&D director, helped my friend with his business for my 6-week long spring break, worked remotely at NASA and even extended that internship by two weeks, then moved and started work for NASA, and all of this was back to back with only a weekend separating each period. At the same time, I overstretched myself that semester by taking an online Thermodynamics course and buying a Volvo 740 estate to work on. As a result, I was constantly tired and had a very hard time focusing on work. One of my biggest regrets is that I did not learn very much about machine learning and AI during this period when I could have so easily met with experts. </p>
 
-        <p>Working at Microsoft was an extremely different, almost surreal, experience. Though my team was very nice and personable, with 180,000 employees and 4,000 interns alone, it was hard not to feel like a small cog in a machine. The scale of the projects, funding, problems - everything, was incredible. They had an official intern day where interns were made to not work and instead join a Teams meeting where Gabriel Iglesias MC’ed and up-and-coming Olivia Rodrigo sang, things like, “you guys are all doing incredible things at Microsoft!” Some of the interns were complaining that for that summer’s intern gift, we chose what charity to donate $50 to, instead of getting Surface laptops or Xbox X’s like previous years. There’s simply no other word to describe it other than “surreal”.</p>
-
-
+        <p>Working at Microsoft was an extremely different, almost surreal, experience. Though my team was very nice and personable, with 180,000 employees and 4,000 interns alone, it was hard not to feel like a small cog in a machine. The scale of the projects, funding, problems - everything, was incredible. They had an official intern day where interns were made to not work and instead join a Teams meeting where Gabriel Iglesias MC’ed and up-and-coming Olivia Rodrigo sang, things like, “you guys are all doing incredible things at Microsoft!” Some of the interns were complaining that for that summer’s intern gift, we chose what charity to donate $50 to, instead of getting Surface laptops or Xbox X’s like previous years. Overall, it was a very unique internship, from the application to the work to the intern experience.</p>
     </div>
 }

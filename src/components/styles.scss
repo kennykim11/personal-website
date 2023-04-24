@@ -545,53 +545,6 @@ a {
     max-width: 763px;
 }
 
-#storyContents {
-    max-width: 700px;
-    margin: auto;
-    font-family: $paragraph-type;
-    font-size: 18px;
-    padding-right: 40px;;
-
-    h1 {
-        font-size: 48;
-        font-weight: 600;
-        text-align: center;
-    }
-
-    h2 {
-        font-size: 36;
-        font-weight: 500;
-    }
-
-    h3 {
-        font-size: 24;
-        font-weight: 700;
-        color: $primary;
-        padding-top: 20px;
-    }
-
-    h4 {
-        font-size: 18;
-        font-weight: 400;
-    }
-
-    p {
-        font-size: 18;
-        font-family: $primary-type;
-        text-align: justify;
-        text-justify: inter-word;
-        padding-bottom: 0px;
-        line-height: 120%;
-    }
-
-    #introduction {
-        p {
-            font-style: italic;
-            font-weight: 500;
-        }
-    }
-}
-
 #loadingScreen {
     margin: auto;
     text-align: center;
