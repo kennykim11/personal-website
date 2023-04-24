@@ -19,7 +19,7 @@ export function Nav() {
             <NavLink to='/'><h3 className="navLink">ADVENTURES</h3></NavLink>
             <Link to='/'><h3 className="navLink" onClick={()=>{storage.summaryMode=true}}>INTRODUCTION</h3></Link>
             <Link to='/testimonials'><h3 className="navLink">TESTIMONIALS</h3></Link>
-            <h3 className="navLink" id="navLink_tools">TOOLS</h3>
+            {/* <h3 className="navLink" id="navLink_tools">TOOLS</h3> */}
             <NavLink to="/story/contact"><h3 className="navLink">CONTACT</h3></NavLink>
         </div>
     </div>

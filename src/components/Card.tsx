@@ -1,9 +1,9 @@
 import {Link} from "react-router-dom"
 
-import HeadshotImage from '../assets/thumbnails/=thumbnail_placeholder.png'
+import PlaceholderThumbnail from '../assets/thumbnails/=thumbnail_placeholder.png'
 
 export function Card(props) {
-    let imageSource = "../assets/thumbnails/"+props.story.id+".png"
+    let imageSource = props.story.thumbnail
     return <Link to={'/story/'+props.story.id}>
         <div className="card">
             <div className="cardThemeBar">
@@ -14,8 +14,8 @@ export function Card(props) {
             <div className="thumbnailArea">
                 <img className="thumbnail" src={imageSource} 
                     onError={(e: React.SyntheticEvent<HTMLImageElement, Event>)=>{
-                        e.currentTarget.onerror = null; e.currentTarget.src = HeadshotImage}
-                    }/>
+                        e.currentTarget.onerror = null; e.currentTarget.src = PlaceholderThumbnail}}
+                    />
             </div>
             <div className="cardTextArea">
                 <h2 className="cardTitle">{props.story.title}</h2>
