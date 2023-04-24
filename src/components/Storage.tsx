@@ -20,7 +20,12 @@ export class Storage {
 
     displayedStories = []
     setDisplayedStories(storiesArray) {return this.displayedStories = storiesArray}
-    resetDisplayedStories() {return this.displayedStories = this.storiesFullIdList}
+    resetDisplayedStories() {
+        // return this.displayedStories = this.storiesFullIdList
+        return this.displayedStories = [
+            "doorman", "sois", "hitchhiking", "friendzone", "moog", "htl", "nasa", "microsoft", "businessCard", "ti", "makerClass", "industrialDesign", "gradParty", "personalWebsite", "contact"
+        ]
+    }
 
     currentPage = 0
     setCurrentPage(page) {return this.currentPage = page}

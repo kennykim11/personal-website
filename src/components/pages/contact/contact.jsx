@@ -6,7 +6,6 @@ import {faSquareXmark} from '@fortawesome/free-solid-svg-icons'
 import './contact_styles.scss'
 
 export default function (props) {
-    console.log(process.env.REACT_APP_WEBFORMS_APIKEY)
     return <div id="contactPage">
         <div><h1>Hello, nice to meet you!</h1></div>
         <form action="https://api.web3forms.com/submit" method="POST">

@@ -11,7 +11,6 @@ function capFirst(text: string) :string {
 }
 
 export function WorkStats(props: IWorkStats_props){
-    console.log(Object.entries(props))
     return <div className="workStats">
         {Object.entries(props).map((pair)=> {
             return <div className="row">

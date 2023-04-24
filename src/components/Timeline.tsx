@@ -31,11 +31,16 @@ const Timeline = observer(() => {
     let lastYear = ""
     let newYear = false
 
+    console.log(storage.displayedStories)
+
     return <div id="timelineFrame" ref={setTimelineFrameRef}>
         <div id="timelineGrid"></div>
         <div id="timelineIcons">
             {storage.displayedStories.map((id) => {
+                console.log(storage.stories)
+                console.log(id)
                 const currentStory = storage.stories[id]
+                console.log(currentStory)
                 if (newYear = currentStory.year !== lastYear) lastYear = currentStory.year
                 return <span key={id}>
                     {newYear && <h4>{lastYear}</h4>}

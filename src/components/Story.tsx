@@ -17,7 +17,7 @@ interface IStory_props {
 
 const Story = observer((props: IStory_props) => {
     const [elpiseHolder, setElipseHolder] = useState(<div/>)
-    const elipses = <Typist cursor={{show: false}} onTypingDone={()=>{setElipseHolder(<div/>); console.log(elpiseHolder); setElipseHolder(elipses); }} avgTypingDelay={1500}>
+    const elipses = <Typist cursor={{show: false}} onTypingDone={()=>{setElipseHolder(elipses)}} avgTypingDelay={1500}>
         ...
         </Typist>
 

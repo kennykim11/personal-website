@@ -28,7 +28,7 @@ const TimelineHighlight = observer((props: ITimelineHighlight_props) => {
     }, [props, storage.cardAreaScroll])
 
     function clickHandler (e: MouseEvent): any {
-        console.log(e.pageY, e.pageY - (parseFloat(timelineHighlightRef.current.style.height)/2))
+        // console.log(e.pageY, e.pageY - (parseFloat(timelineHighlightRef.current.style.height)/2))
         timelineHighlightRef.current.style.top = `${e.pageY - (parseFloat(timelineHighlightRef.current.style.height)/2)}px`
     }
 
