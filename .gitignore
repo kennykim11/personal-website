@@ -6,6 +6,7 @@ src/test
 src/components/pages/*
 src/components/pages/makerClass/timelapse.mp4
 !src/components/pages/story_styles.scss
+!src/components/pages/sandbox
 !src/components/pages/doorman
 !src/components/pages/sois
 !src/components/pages/microsoft
