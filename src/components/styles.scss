@@ -493,7 +493,6 @@ a {
         width: 240px;
         height: 180px;
         margin-right: 24px;
-        overflow: hidden;
     }
 
     .thumbnail {
@@ -686,7 +685,7 @@ a {
     padding-right: 200px;
     padding-bottom: 200px;
     background-color: $neutral;
-    top: -120%;
+    top: 0px;
     left: 0px;
     display: flex;
     align-items: center;
